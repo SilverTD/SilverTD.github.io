@@ -68,7 +68,7 @@ Từ đó ta có thể thay thế dữ liệu đã xử lý thành một ma tr�
 
 $$
 T = \begin{pmatrix}
-1 & 1 & 1\\  
+1 & 1 & 1\\
 1 & 0 & 1\\
 1 & 1 & 0\\
 1 & 1 & 1 \\

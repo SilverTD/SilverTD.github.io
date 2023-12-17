@@ -40,7 +40,7 @@ Ngày 3: có 2 ca sáng và chiều
 Ngày 4: có 3 ca sáng, chiều và tối
 Ngày 5: có 1 ca chiều
 ```
-Tuy nhiên để thuận tiện trong tính toán, mình sẽ biểu diễn lại dưới dạng ma trận $28 \times 3$ có biến nhị phân như sau:
+Tuy nhiên để thuận tiện trong tính toán, mình sẽ biểu diễn lại dưới dạng ma trận $$28\times3$$ có biến nhị phân như sau:
 
 $$
 T_{28 \times 3} = \begin{pmatrix}

@@ -41,6 +41,42 @@ Ngày 4: có 3 ca sáng, chiều và tối
 Ngày 5: có 1 ca chiều
 ```
 Tuy nhiên để thuận tiện trong tính toán, mình sẽ biểu diễn lại dưới dạng ma trận $$28\times3$$ có biến nhị phân như sau:
+
+$$
+T_{28 \times 3} = \begin{pmatrix}
+t_{1,1} & t_{1,2} & t_{1,3} \\
+t_{2,1} & t_{2,2} & t_{2,3} \\
+\vdots & \vdots & \vdots \\
+t_{28,1} & t_{28,2} & t_{28,3}\\
+\end{pmatrix}
+$$
+
+Tương ứng với 28 ngày và 3 ca mỗi ngày, ma trận có ý nghĩa:
+
+$$
+\begin{equation*}
+t_{ij} = 
+\begin{cases}
+      1 & \text{nếu ca làm việc thứ j vào ngày i hoạt động} \\
+      0 & \text{ngược lại}
+\end{cases}
+\ \ \ \ \ \ 1 \leq i \leq 28, \ 1 \leq j \leq 3
+\end{equation*}
+$$
+
+Từ đó ta có thể thay thế dữ liệu đã xử lý thành một ma trận đơn giản và dễ hiểu hơn:
+
+$$
+T = \begin{pmatrix}
+1 & 1 & 1\\  
+1 & 0 & 1\\
+1 & 1 & 0\\
+1 & 1 & 1 \\
+0 & 1 & 0 \\
+ & \cdots & 
+\end{pmatrix}
+$$
+
 Đến đây ta đã hoàn thành trong việc xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` thành một ma trận nhị phân giúp ta thuận lợi trong việc tính toán sau này. Việc xử lý file này khá quan trọng, vì nếu bất cẩn trong xử lý file thì những thuật toán của chúng ta cho dù hoạt động tốt nhưng vẫn sẽ cho ra kết quả không chính xác.
 
 Ví dụ như trong ngày ``2023-06-01`` sẽ có 3 ca: sáng, chiều và tối nhưng bạn xử lý file chỉ còn mỗi 2 ca: sáng, chiều thì dẫn đến kết quả sẽ sai (vì thiếu mất ca tối).

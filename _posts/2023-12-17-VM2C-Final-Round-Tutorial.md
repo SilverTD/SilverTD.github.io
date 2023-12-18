@@ -160,9 +160,9 @@ Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được
 ![chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/1f3b4131-00e7-4534-9a0e-49083e3aaf0c)
 ![chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/023e426e-09bb-4c15-b47d-1592a5d4ac5d)
 
-Toàn bộ source code của mình: https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final
+Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
-Các ý tưởng và hướng đi, mình đều dùng lại những ý tưởng mà mình chưa hoàn thành được khi đang làm bài thi này ở viện <b>VISAM</b>: https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2
+Các ý tưởng và hướng đi, mình đều dùng lại những ý tưởng mà mình chưa hoàn thành được khi đang làm bài thi này ở viện <b>VISAM</b>: [VM2C_Vong2](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2 "VM2C Vong2")
 
 Do đó có thể các đoạn code, ý tưởng của mình sẽ hơi đần, nên thông cảm cho mình nhé.
 

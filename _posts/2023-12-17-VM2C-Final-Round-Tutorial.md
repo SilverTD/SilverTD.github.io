@@ -158,26 +158,26 @@ Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được
 ![chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/1f3b4131-00e7-4534-9a0e-49083e3aaf0c)
 ![chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/023e426e-09bb-4c15-b47d-1592a5d4ac5d)
 
-## 2.6 Nhận xét
-### Ưu điểm
+## 2.6. Nhận xét
+### 2.6.1. Ưu điểm
 Đây vốn dĩ là một mô hình khá đơn sơ, đơn giản nên rất dễ hiểu, bên cạnh đó những thứ chúng ta làm không thực sự quá nặng toán. Cơ bản là chỉ làm theo những gì đề cho.
 Kết quả mà chúng ta vừa tìm được trông khá ổn.
 
-### Nhược điểm
+### 2.6.2. Nhược điểm
 Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu. Do chúng ta đang xét qua từng ca và xử lý, cách này không hẳn là ổn. Cách tốt hơn là chúng ta xét tất cả các ngày.
 
-# Tổng kết
+# 2. Tổng kết
 Do mình không hẳn là có nhiều thời gian, nên mình chỉ có thể viết bài đăng giải câu 1a thôi. Nhưng từ đó bạn đã thấy được cách hoạt động và hướng đi của mình, và bạn có thể tự nghiên cứu mà giải nốt các câu còn lại. Do đây là toán mô hình, nên không có một lời giải duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
 
 Và đây là một cuộc thi khá là hay phải không ? Nó giúp mình rèn luyện tư duy giải quyết vấn đề, tư duy sáng tạo trong lời giải,... Mình mong cuộc thi này sẽ càng phát triển và nhiều bạn trẻ sẽ tham gia hơn !
 
-# Một số hình ảnh
+# 3. Một số hình ảnh
 ![prize](https://github.com/SilverTD/Stuffs/assets/55396370/e74d2ecb-465e-4467-b1b2-1a8f859407aa)
 ![prize2](https://github.com/SilverTD/Stuffs/assets/55396370/506fddfb-20cb-4f91-a4f3-52e1275d1f7a)
 ![vm2c](https://github.com/SilverTD/Stuffs/assets/55396370/910ab01c-cc78-47c1-a7a2-da9a1b308b2a)
 
 
-# Tài liệu tham khảo
+# 4. Tài liệu tham khảo
 ```
 - Bài làm của các bạn chuyên KHTN: https://github.com/hsgs-wtg/Final-Round
 - Tài liệu của VM2C: https://vm2c.viasm.edu.vn/

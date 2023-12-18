@@ -13,14 +13,20 @@ Kỳ thi gồm 2 vòng. Ở mỗi vòng, thử thách của các đội là tìm
 Đây là một kỳ thi khá hay và mới lạ, nó hoàn toàn khác so với các kỳ thi học sinh giỏi khác. Và đội của mình cũng là đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này !
 
 ## 1.2. Cảm nhận về kỳ thi
-Mình vốn là người thích nghiên cứu nhưng ghét làm bài tập, nên kỳ thi này khá hợp với mình. Kỳ thi này giúp bạn trông như đang nhập vai vào một nhà khoa học đang nghiên cứu vậy, mọi thứ đều phải tự tìm kiếm, nghiên cứu chứ không hề có sẵn các công cụ cho bạn dùng. Và do là toán mô hình nên không có cụ thể một lời giải nào cả, do đó bạn có thể thỏa sức sáng tạo lời giải và tối ưu chúng. Kỳ thi này giúp bạn cải thiện rất nhiều kĩ năng trong thực tế như kĩ năng giải quyết vấn đề, quản lí thời gian, làm việc nhóm, thuyết trình,... Và một khi đã học thì phải biết cách áp dụng những kiến thức đó trong thực tế.
+Mình vốn là người thích nghiên cứu nhưng ghét làm bài tập, nên kỳ thi này khá hợp với mình. Kỳ thi này giúp bạn trông như đang nhập vai vào một nhà khoa học đang nghiên cứu vậy, mọi thứ đều phải tự tìm kiếm, nghiên cứu chứ không hề có sẵn các công cụ cho bạn dùng.
+
+Và do là toán mô hình nên không có cụ thể một lời giải nào cả, do đó bạn có thể thỏa sức sáng tạo lời giải và tối ưu chúng.
+
+Kỳ thi này giúp bạn cải thiện rất nhiều kĩ năng trong thực tế như kĩ năng giải quyết vấn đề, quản lí thời gian, làm việc nhóm, thuyết trình,... Và một khi đã học thì phải biết cách áp dụng những kiến thức đó trong thực tế.
 
 # 2. Hướng giải quyết bài toán 1a vòng 2
 
 > Do có giới hạn về thời gian, nên mình sẽ chỉ giải quyết bài toán 1a của vòng 2 (câu a trên dữ liệu 1).
+ 
+> Đề vòng 2: [Đề thi](https://vm2c.viasm.edu.vn/images/VM2C%20-%20De%20thi%20Vong%20II.pdf "Đề thi")
 
 ## 2.1. Xử lý file lenh_san_xuat_Day_chuyen_1.txt
-Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, nó khá phức tạp trong việc xử lý file này và nó khiến mình mất khá nhiều thời gian. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
+Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, mình đã quên mất file này cho đến khi vào ngày cuối cùng làm bài thì mình mới nhận ra là có sự tồn tại của file này. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
 
 Đề bài cho biết trong một ngày có 3 ca:
 + Ca sáng: 6h - 14h.
@@ -92,7 +98,7 @@ File xử lý bằng tay để kiểm tra code mình hoạt động ổn: [proce
 ## 2.2. Các biến số
 Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ij} \\}$ là ma trận chứa các biến $x_{ij}$ với ý nghĩa công nhân i được chọn làm ca làm việc $j$.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ij} \\}$ là ma trận chứa các biến $x_{ij}$ với ý nghĩa công nhân $i$ được chọn làm ca thứ $j$ hay không.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B = \\{b_{ij} \\}$ là ma trận chứa các biến $b_{ij}$ với ý nghĩa công nhân thứ $i$ có kĩ năng $j$ hay không.
 
@@ -109,7 +115,7 @@ Ta sẽ xét từng ca trong mỗi ngày, ta xét ngày thứ $l$:
 
 $$
 \begin{aligned}
-x_{ij} \leq b_{ij} \ \ \ \ \ \forall i, j > 0
+x_{ij} \leq b_{ij} \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
@@ -117,15 +123,15 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{j}^{}x_{ij} \leq 1 \ \ \ \ \ \forall i, j > 0
+\sum\limits_{j}^{}x_{ij} \leq 1 \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
-3. Tổng công nhân làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{j}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các công nhân chỉ làm một ca duy nhất trong ngày và các công nhân làm ca đêm hôm trước sẽ không làm ca sáng hôm nay.:
+3. Tổng công nhân làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{j}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các công nhân chỉ làm một ca duy nhất trong ngày và các công nhân làm ca đêm hôm trước sẽ không làm ca sáng hôm nay:
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}x_{ij} * w_{i} \geq r_{j} \ \ \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}(x_{ij} * w_{i}) \geq r_{j} \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
@@ -133,25 +139,33 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}x_{ij} + d_{i} \leq 24 \ \ \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}(x_{ij} + d_{i}) \leq 24 \ \ \ \forall i, j > 0
 \end{aligned} 
 $$
 
 ##  2.4. Hàm mục tiêu
-Mục tiêu của chúng ta sẽ là tối ưu số ca làm việc là nhỏ nhất và đạt sự công bằng nhất giữa các công nhân. Điều này có nghĩa độ chênh lệch số ngày làm việc và số ca đêm làm việc của các công nhân là nhỏ nhất có thể.
-
-Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ngày, số ca đêm nhỏ nhất. Điều đó có nghĩa:
+Mục tiêu mà chúng ta cần tối ưu đầu tiên là số lượng công nhân tham gia làm việc luôn phải là nhỏ nhất:
 
 $$
-F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * d_{i}
+F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij}
 $$
 
-$$
-F_{2} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * n_{i}
-$$
+Tiếp theo là ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
 
 $$
-OP = min(A * F_1 + B * F_2)
+F_{2} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * d_{i}
+$$
+
+Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
+
+$$
+F_{3} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * n_{i}
+$$
+
+Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$ và thêm các trọng số sao cho hợp lý nhất:
+
+$$
+OP = min(F_1 + A * F_2 + B * F_3)
 $$
 
 Với A và B là các hằng số, do ta ưu tiên độ công bằng ngày làm việc giữa các công nhân hơn nên hằng số A lớn hơn hằng số B.

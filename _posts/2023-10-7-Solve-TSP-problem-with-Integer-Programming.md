@@ -4,13 +4,13 @@ title: Solve TSP problem with Integer Programming
 
 ---
 
-## Phát biểu bài toán
+## 1. Phát biểu bài toán
 Bài toán được phát biểu như sau một người giao hàng cần đi giao hàng tại n thành phố. Xuất phát từ một thành phố nào đó, đi qua các thành phố khác để giao hàng và trở về thành phố ban đầu. Mỗi thành phố chỉ đến một lần, khoảng cách từ một thành phố đến các thành phố khác là xác định được. Giả thiết rằng mỗi thành phố đều có đường đi đến các thành phố còn lại. Khoảng cách giữa hai thành phố có thể là khoảng cách địa lý, có thể là cước phí di chuyển hoặc thời gian di chuyển. Ta gọi chung là độ dài. Hãy tìm một chu trình (một đường đi khép kín thỏa mãn điều kiện trên) sao cho tổng độ dài các cạnh là nhỏ nhất. Hay còn nói là tìm một phương án có giá nhỏ nhất.
 
 Bài toán có thể biểu diễn bởi một đồ thị vô hướng có trọng số $G = (V, E)$.
 Với $V$ là tập hợp các đỉnh, $E$ là tập hợp các cạnh của đồ thị.
-## Giải quyết
-### Biến và ma trận
+## 2. Giải quyết
+### 2.1. Biến và ma trận
 Đầu tiên ta biểu diễn lại đồ thị dưới dạng ma trận $C$ khoảng cách đối xứng (symmetrical).
 
 Đầu tiên ta gọi $c_{ij}$ là khoảng cách đi từ đỉnh i sang đỉnh j. Ta sẽ biểu diễn ma trận $C$ như sau:
@@ -47,7 +47,7 @@ X = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-### Các ràng buộc
+### 2.2. Các ràng buộc
 1. (mapping constraints) Điều kiện ràng buộc đầu tiên là bậc của mỗi đỉnh là 2, điều này có ý nghĩa rằng mỗi đỉnh phải có 2 đường đi nối với nó, gồm đường đi vào và đường đi ra.
 
 $$
@@ -64,7 +64,7 @@ $$
 $$
 
 2. (un-looped constraints) Mỗi đỉnh không tự đi trực tiếp tới chính nó được, do đó ta có:
-3. 
+
 $$x_{ii} = 0 \ \ \ \ \ \forall i \in \mathbb{N} \cap [0; n)$$
 
 4. (sub-tour elimination constraints) Đây cũng là điều kiện quan trọng nhất của bài toán, ta cần loại bỏ các chu trình con.
@@ -76,7 +76,7 @@ Nghĩa rằng khi ta có một chu trình con thì tổng các cạnh nối củ
 
 $$x_{12} + x_{23} + x_{31} \leq 2 $$
 
-### Hàm mục tiêu
+### 2.3. Hàm mục tiêu
 Hàm mục tiêu của chúng ta chắc chắn là tổng quãng đường của chu trình phải là nhỏ nhất.
 
 $$
@@ -85,7 +85,7 @@ $$
 \end{aligned} 
 $$
 
-### Nhược điểm và khắc phục
+### 2.4. Nhược điểm và khắc phục
 Ở ràng buộc cuối cùng, ta thấy nó sẽ có cực kì nhiều điều kiện như vậy. Cụ thể với đồ thị n đỉnh thì ta có $2^n - n - 2$ điều kiện.
 - $2^n$ cách chọn các chu trình con.
 - $n$ cách chọn các chu trình con chỉ có 1 đỉnh.
@@ -95,5 +95,5 @@ $$
 
 Source code: [main.cpp](https://github.com/SilverTD/Stuffs/blob/main/TSP/main.cpp "main.cpp")
 
-## Tài liệu tham khảo
+## 3. Tài liệu tham khảo
 Tôi đã tham khảo tài liệu rất hay của anh Hoàng Anh Quân, đây là tài liệu mà tôi đã được tập huấn tại viện nghiên cứu cao cấp về toán VIASM cho cuộc thi VM2C 2023.

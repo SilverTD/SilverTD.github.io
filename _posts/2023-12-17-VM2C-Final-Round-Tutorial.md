@@ -10,14 +10,14 @@ title: VM2C Final Round Tutorial
 
 Kỳ thi gồm 2 vòng. Ở mỗi vòng, thử thách của các đội là tìm ra giải pháp cho một vấn đề mở, thường thì không giống các bài tập về nhà hay dự án nhóm trên lớp học thông thường. Kỹ năng quản lý thời gian, làm việc nhóm, viết và trình bày báo cáo cũng quan trọng không kém khả năng tìm hiểu các kiến thức mới và tư duy ứng dụng vào thực tế.
 
-Đây là một kỳ thi khá hay và mới lạ, nó hoàn toàn khác so với các kỳ thi học sinh giỏi khác. Và đội của mình cũng là đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này !
+Kỳ thi VM2C là một sân chơi bổ ích và thú vị, giúp các học sinh phát triển các kỹ năng cần thiết cho thế kỷ 21. Đội của mình rất vinh dự khi là một trong những đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này.
 
 ## 1.2. Cảm nhận về kỳ thi
-Mình vốn là người thích nghiên cứu nhưng ghét làm bài tập, nên kỳ thi này khá hợp với mình. Kỳ thi này giúp bạn trông như đang nhập vai vào một nhà khoa học đang nghiên cứu vậy, mọi thứ đều phải tự tìm kiếm, nghiên cứu chứ không hề có sẵn các công cụ cho bạn dùng.
+Mình là người thích nghiên cứu nhưng lại ghét làm bài tập, vì vậy mình rất thích kỳ thi VM2C. Kỳ thi này giúp mình có cảm giác như đang nhập vai thành một nhà khoa học thực thụ, phải tự tìm kiếm và nghiên cứu mọi thứ chứ không có sẵn công cụ nào cho mình.
 
-Và do là toán mô hình nên không có cụ thể một lời giải nào cả, do đó bạn có thể thỏa sức sáng tạo lời giải và tối ưu chúng.
+Bên cạnh đó, do là toán mô hình nên không có một lời giải cụ thể nào, điều này cho phép chúng ta thỏa sức sáng tạo lời giải và tối ưu chúng.
 
-Kỳ thi này giúp bạn cải thiện rất nhiều kĩ năng trong thực tế như kĩ năng giải quyết vấn đề, quản lí thời gian, làm việc nhóm, thuyết trình,... Và một khi đã học thì phải biết cách áp dụng những kiến thức đó trong thực tế.
+Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết trong thực tế, chẳng hạn như kỹ năng giải quyết vấn đề, quản lý thời gian, làm việc nhóm và thuyết trình. Minh tin rằng những kỹ năng này sẽ giúp ích rất nhiều trong tương lai.
 
 # 2. Hướng giải quyết bài toán 1a vòng 2
 
@@ -150,22 +150,22 @@ $$
 F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij}
 $$
 
-Tiếp theo là ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
+Tiếp theo ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
 
 $$
-F_{2} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * d_{i}
+F_{2} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * d_{i})
 $$
 
 Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
 
 $$
-F_{3} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij} * n_{i}
+F_{3} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * n_{i})
 $$
 
 Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$ và thêm các trọng số sao cho hợp lý nhất:
 
 $$
-OP = min(F_1 + A * F_2 + B * F_3)
+OP = F_1 + A * F_2 + B * F_3
 $$
 
 Với A và B là các hằng số, do ta ưu tiên độ công bằng ngày làm việc giữa các công nhân hơn nên hằng số A lớn hơn hằng số B.
@@ -201,17 +201,17 @@ Do đó có thể các đoạn code, ý tưởng của mình sẽ hơi đần, n
 Kết quả mà chúng ta vừa tìm được trông khá ổn.
 
 ### 2.6.2. Nhược điểm
-Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu. Do chúng ta đang xét qua từng ca và xử lý, cách này không hẳn là ổn.
+Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu.
 
 ### 2.6.3. Cải thiện
 Ở đây có rất nhiều cách cải thiện và phát triển thêm khác nhau, riêng mình sau khi tham khảo bài làm của đội trường chuyên <b>KHTN</b> thì mình thấy các bạn thêm vào "Độ bất mãn" trông cũng khá hay.
 
-Và của chúng ta là xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Còn các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
+Mô hình chúng ta đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
 
 # 3. Tổng kết
-Do mình không hẳn là có nhiều thời gian, nên mình chỉ có thể viết bài đăng giải câu 1a thôi. Nhưng từ đó bạn đã thấy được cách hoạt động và hướng đi của mình, và bạn có thể tự nghiên cứu mà giải nốt các câu còn lại. Do đây là toán mô hình, nên không có một lời giải duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
+Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đăng giải quyết câu 1a. Nhưng nếu bạn đã đọc bài viết của mình, các bạn sẽ nắm được hướng giải quyết và từ đó hình thành tư duy để giải quyết các phần còn lại của bài toán. Do đây là toán mô hình, nên không có một lời giải cụ thể duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
 
-Và đây là một cuộc thi khá là hay phải không ? Nó giúp mình rèn luyện tư duy giải quyết vấn đề, tư duy sáng tạo trong lời giải,... Mình mong cuộc thi này sẽ càng phát triển và nhiều bạn trẻ sẽ tham gia hơn !
+Đây vốn dĩ là một cuộc thi khá hay phải không ? Nó hoàn toàn giúp chúng ta rèn luyện được khá nhiều kĩ năng có ích trong thực tế, và đây hoàn toàn là một cuộc thi xứng đáng để chúng ta trải nghiệm một lần.
 
 # 4. Một số hình ảnh
 ![prize](https://github.com/SilverTD/Stuffs/assets/55396370/e74d2ecb-465e-4467-b1b2-1a8f859407aa)
@@ -221,6 +221,6 @@ Và đây là một cuộc thi khá là hay phải không ? Nó giúp mình rèn
 
 # 5. Tài liệu tham khảo
 ```
-- Bài làm của các bạn chuyên KHTN: https://github.com/hsgs-wtg/Final-Round
+- Bài làm của đội trường chuyên KHTN: https://github.com/hsgs-wtg/Final-Round
 - Tài liệu của VM2C: https://vm2c.viasm.edu.vn/
 ```

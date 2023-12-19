@@ -1,6 +1,6 @@
 ---
 
-title: VM2C Final Round tutorial
+title: VM2C Final Round Tutorial
 
 ---
 
@@ -174,19 +174,39 @@ Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được
 ![chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/1f3b4131-00e7-4534-9a0e-49083e3aaf0c)
 ![chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/023e426e-09bb-4c15-b47d-1592a5d4ac5d)
 
+Ở đồ thị (1), ta thấy được $max = 22$ và $min = 16$:
+- $max - min = 22 - 16 = 6$
+- Trung bình: $\overline{x} \approx 19.41$
+- Độ lệch chuẩn $\sigma \approx 2.14$
+
+Tương tự ở đồ thị (2), ta thấy được $max = 10$ và $min = 3$:
+- $max - min = 10 - 3 = 7$
+- Trung bình: $\overline{x} \approx 6.17$
+- Độ lệch chuẩn $\sigma \approx 2.3$
+
+Từ các số liệu vừa tính toán ở trên, ta thấy được kết quả của chúng ta không hẳn là quá tệ. Các dữ liệu phân tán có thể xem là khá đồng đều.
+
+Một số công nhân có số ngày ít thường là các công nhân chỉ có kỹ năng "Rot", vì trong mỗi ca, kỹ năng "Rot" chỉ cần 1 người làm duy nhất. Nên hiển nhiên các công nhân đó có số ca làm việc ít hơn.
+
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
-Các ý tưởng và hướng đi, mình đều dùng lại những ý tưởng mà mình chưa hoàn thành được khi đang làm bài thi này ở viện <b>VISAM</b>: [VM2C_Vong2](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2 "VM2C Vong2")
+Mọi ý tưởng và hướng đi mình vừa trình bày ở bên trên, đều là những ý tưởng, suy nghĩ của mình khi đang làm bài thi ở viện nghiên cứu <b>VISAM</b>: [VM2C_Vong2](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2 "VM2C Vong2")
 
 Do đó có thể các đoạn code, ý tưởng của mình sẽ hơi đần, nên thông cảm cho mình nhé.
 
 ## 2.6. Nhận xét
 ### 2.6.1. Ưu điểm
 Đây vốn dĩ là một mô hình khá đơn sơ, đơn giản nên rất dễ hiểu, bên cạnh đó những thứ chúng ta làm không thực sự quá nặng toán. Cơ bản là chỉ làm theo những gì đề cho.
+
 Kết quả mà chúng ta vừa tìm được trông khá ổn.
 
 ### 2.6.2. Nhược điểm
-Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu. Do chúng ta đang xét qua từng ca và xử lý, cách này không hẳn là ổn. Cách tốt hơn là chúng ta xét tất cả các ngày.
+Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu. Do chúng ta đang xét qua từng ca và xử lý, cách này không hẳn là ổn.
+
+### 2.6.3. Cải thiện
+Ở đây có rất nhiều cách cải thiện và phát triển thêm khác nhau, riêng mình sau khi tham khảo bài làm của đội trường chuyên <b>KHTN</b> thì mình thấy các bạn thêm vào "Độ bất mãn" trông cũng khá hay.
+
+Và của chúng ta là xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Còn các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
 
 # 3. Tổng kết
 Do mình không hẳn là có nhiều thời gian, nên mình chỉ có thể viết bài đăng giải câu 1a thôi. Nhưng từ đó bạn đã thấy được cách hoạt động và hướng đi của mình, và bạn có thể tự nghiên cứu mà giải nốt các câu còn lại. Do đây là toán mô hình, nên không có một lời giải duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 

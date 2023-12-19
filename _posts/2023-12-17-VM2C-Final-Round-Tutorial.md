@@ -177,12 +177,12 @@ Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được
 Ở đồ thị (1), ta thấy được $max = 22$ và $min = 16$:
 - $max - min = 22 - 16 = 6$
 - Trung bình: $\overline{x} \approx 19.41$
-- Độ lệch chuẩn $\sigma \approx 2.14$
+- Độ lệch chuẩn: $\sigma \approx 2.14$
 
 Tương tự ở đồ thị (2), ta thấy được $max = 10$ và $min = 3$:
 - $max - min = 10 - 3 = 7$
 - Trung bình: $\overline{x} \approx 6.17$
-- Độ lệch chuẩn $\sigma \approx 2.3$
+- Độ lệch chuẩn: $\sigma \approx 2.3$
 
 Từ các số liệu vừa tính toán ở trên, ta thấy được kết quả của chúng ta không hẳn là quá tệ. Các dữ liệu phân tán có thể xem là khá đồng đều.
 

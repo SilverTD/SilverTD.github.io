@@ -26,7 +26,7 @@ Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết t
 > Đề vòng 2: [Đề thi](https://vm2c.viasm.edu.vn/images/VM2C%20-%20De%20thi%20Vong%20II.pdf "Đề thi")
 
 ## 2.1. Xử lý file lenh_san_xuat_Day_chuyen_1.txt
-Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, mình đã quên mất file này cho đến khi vào ngày cuối cùng làm bài thì mình mới nhận ra là có sự tồn tại của file này. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
+Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, mình đã quên mất file này cho đến khi vào ngày cuối cùng thì mình mới nhận ra là có sự tồn tại của file này. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
 
 Đề bài cho biết trong một ngày có 3 ca:
 + Ca sáng: 6h - 14h.
@@ -41,7 +41,7 @@ Thoi_gian_bat_dau; Thoi_gian_ket_thuc
 2023-06-03 06:00:00; 2023-06-03 22:00:00
 ```
 
-Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi công xưởng mở). Như với file dữ liệu ở trên thì công xưởng mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Mình sẽ xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` như sau:
+Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi công xưởng mở). Như với file dữ liệu ở trên thì công xưởng mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Ta sẽ xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` như sau:
 
 ```
 Ngày 1: có 3 ca sáng, chiều và tối 
@@ -50,7 +50,7 @@ Ngày 3: có 2 ca sáng và chiều
 Ngày 4: có 3 ca sáng, chiều và tối
 Ngày 5: có 1 ca chiều
 ```
-Tuy nhiên để thuận tiện trong tính toán, mình sẽ biểu diễn lại dưới dạng ma trận $28 \times 3$ có biến nhị phân như sau:
+Tuy nhiên để thuận tiện trong tính toán, ta sẽ biểu diễn lại dưới dạng ma trận $28 \times 3$ có biến nhị phân như sau:
 
 $$
 T_{28 \times 3} = \begin{pmatrix}
@@ -93,7 +93,7 @@ Ví dụ như trong ngày ``2023-06-01`` sẽ có 3 ca: sáng, chiều và tối
 
 Source code xử lý file này: [data_processing.py](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/data_processing.py "data_processing.py")
 
-File xử lý bằng tay để kiểm tra code mình hoạt động ổn: [processed_lenh_san_xuat_Day_chuyen_1.txt](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/processed_lenh_san_xuat_Day_chuyen_1.txt "processed_lenh_san_xuat_Day_chuyen_1.txt")
+File xử lý bằng tay để kiểm tra code hoạt động ổn: [processed_lenh_san_xuat_Day_chuyen_1.txt](https://github.com/SilverTD/PhysicsAndMath/blob/main/VM2C_Final/processed_lenh_san_xuat_Day_chuyen_1.txt "processed_lenh_san_xuat_Day_chuyen_1.txt")
 
 ## 2.2. Các biến số
 Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:

@@ -171,8 +171,9 @@ $$
 Với A và B là các hằng số, do ta ưu tiên độ công bằng ngày làm việc giữa các công nhân hơn nên hằng số A lớn hơn hằng số B.
 ## 2.5. Áp dụng mô hình
 Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được kết quả như đồ thị dưới đây. Về cơ bản đây là một kết quả khá tốt đối với một mô hình khá đơn giản như của chúng ta đã làm.
-![chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/1f3b4131-00e7-4534-9a0e-49083e3aaf0c)
-![chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/023e426e-09bb-4c15-b47d-1592a5d4ac5d)
+
+![NQD_chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/9f710531-5afa-43ed-98e8-627e39b171f3)
+![NQD_chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/8ed936d1-d230-45b4-8427-b0320bab11b4)
 
 Ở đồ thị (1), ta thấy được $max = 22$ và $min = 16$:
 - $max - min = 22 - 16 = 6$

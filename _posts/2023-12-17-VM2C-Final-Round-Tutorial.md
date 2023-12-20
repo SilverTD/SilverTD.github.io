@@ -26,7 +26,7 @@ Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết t
  
 > Đề vòng 2: [Đề thi](https://vm2c.viasm.edu.vn/images/VM2C%20-%20De%20thi%20Vong%20II.pdf "Đề thi")
 
-## 2.1. Xử lý file lenh_san_xuat_Day_chuyen_1.txt
+## 2.1. Xử lý file lenh_san_xuat_Day_chuyen_?.txt
 Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, mình đã quên mất file này cho đến khi vào ngày cuối cùng thì mình mới nhận ra là có sự tồn tại của file này. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
 
 Đề bài cho biết trong một ngày có 3 ca:
@@ -234,7 +234,7 @@ Chắc chắn là do mô hình còn quá đơn giản nên không thực sự qu
 Mô hình chúng ta đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
 
 # 3. Tổng kết
-Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đăng giải quyết câu 1a. Nhưng nếu bạn đã đọc bài viết của mình, các bạn sẽ nắm được hướng giải quyết và từ đó hình thành tư duy để giải quyết các phần còn lại của bài toán. Do đây là toán mô hình, nên không có một lời giải cụ thể duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
+Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đăng giải quyết câu a. Nhưng nếu bạn đã đọc bài viết của mình, các bạn sẽ nắm được những gì bài toán yêu cầu và hướng đi, từ đó hình thành tư duy để giải quyết nốt các phần còn lại của bài toán. Do đây là toán mô hình, nên không có một lời giải cụ thể duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
 
 Đây vốn dĩ là một cuộc thi khá hay phải không ? Nó hoàn toàn giúp chúng ta rèn luyện được khá nhiều kĩ năng có ích trong thực tế, và đây hoàn toàn là một cuộc thi xứng đáng để chúng ta trải nghiệm một lần.
 

@@ -1,6 +1,7 @@
 ---
 
 title: VM2C Final Round Tutorial
+thumbnail: https://github.com/SilverTD/Stuffs/assets/55396370/9f710531-5afa-43ed-98e8-627e39b171f3
 
 ---
 

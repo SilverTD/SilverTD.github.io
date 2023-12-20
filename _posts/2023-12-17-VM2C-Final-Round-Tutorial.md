@@ -212,13 +212,11 @@ Tương tự ở đồ thị (2), ta thấy được $max = 11$ và $min = 3$:
 - Trung bình: $\overline{x} \approx 6.49$
 - Độ lệch chuẩn: $\sigma \approx 1.63$
 
-Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta rất tốt độ lệch chuẩn chỉ 0.65, nên các dữ liệu phân bố khá đồng đều với $max - min = 3$. Tương tự với đồ thị (2), ta thấy độ lệch chuẩn chỉ có $1.63$, nó cực kì tốt với độ lệch chuẩn như thế. Các dữ liệu phân bố đồng đều với $max - min = 8$. Như vậy ta thấy mô hình của chúng ta hoạt động rất hiệu quả.
+Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta rất tốt, ở đồ thị (1) có độ lệch chuẩn chỉ 0.62, nên các dữ liệu phân bố khá đồng đều với $max - min = 2$. Tương tự với đồ thị (2), ta thấy độ lệch chuẩn chỉ có $1.63$, nó cực kì tốt đối với độ lệch chuẩn như thế. Các dữ liệu phân bố đồng đều với $max - min = 8$. Như vậy, ta thấy mô hình của chúng ta vừa xây dựng hođộng rất hiệu quả.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
 Mọi ý tưởng và hướng đi mình vừa trình bày ở bên trên, đều là những ý tưởng, suy nghĩ của mình khi đang làm bài thi ở viện nghiên cứu <b>VIASM</b>: [VM2C_Vong2](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2 "VM2C Vong2")
-
-Do đó có thể các đoạn code, ý tưởng của mình sẽ hơi đần, nên thông cảm cho mình nhé.
 
 ## 2.6. Nhận xét
 ### 2.6.1. Ưu điểm

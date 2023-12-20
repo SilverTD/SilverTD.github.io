@@ -198,20 +198,21 @@ Một số công nhân có số ngày ít thường là các công nhân chỉ c
 
 Có một điều mà ta sẽ phải khá bất ngờ từ kết quả mà thuật toán ta tạo ra, dưới đây là đồ thị của kết quả:
 
-![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/f384de9e-53c4-4cb0-8850-5f46ff0cf66f)
-![NQD_chart_2_2](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/307c0809-e4fe-4e74-9f9c-b2893077ceaa)
+![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/81430989-204f-4254-918a-cccb58c05c76)
+![NQD_chart_2_2](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/99c3ebbc-0e64-48e7-86d8-9938dca15a64)
 
-Ở đồ thị (1), ta thấy được $max = 22$ và $min = 19$:
-- $max - min = 22 - 19 = 3$
+
+Ở đồ thị (1), ta thấy được $max = 21$ và $min = 19$:
+- $max - min = 21 - 19 = 2$
 - Trung bình: $\overline{x} \approx 20.29$
-- Độ lệch chuẩn: $\sigma \approx 0.65$
+- Độ lệch chuẩn: $\sigma \approx 0.62$
 
-Tương tự ở đồ thị (2), ta thấy được $max = 12$ và $min = 0$:
-- $max - min = 12 - 0 = 12$
+Tương tự ở đồ thị (2), ta thấy được $max = 11$ và $min = 3$:
+- $max - min = 11 - 3 = 8$
 - Trung bình: $\overline{x} \approx 6.49$
-- Độ lệch chuẩn: $\sigma \approx 3.17$
+- Độ lệch chuẩn: $\sigma \approx 1.63$
 
-Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta rất tốt độ lệch chuẩn chỉ 0.65, nên các dữ liệu phân bố khá đồng đều với $max - min = 3$. Tuy nhiên ngược lại là độ lệch chuẩn của số ca đêm giữa các công nhân là rất cao $3.17$, nên dữ liệu dao động quanh giá trị trung bình khá nhiều $max - min = 12$. Từ đó có thể thấy chúng ta chưa hoàn toàn tối ưu được độ công bằng ca đêm giữa các công nhân.
+Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta rất tốt độ lệch chuẩn chỉ 0.65, nên các dữ liệu phân bố khá đồng đều với $max - min = 3$. Tương tự với đồ thị (2), ta thấy độ lệch chuẩn chỉ có $1.63$, nó cực kì tốt với độ lệch chuẩn như thế. Các dữ liệu phân bố đồng đều với $max - min = 8$. Như vậy ta thấy mô hình của chúng ta hoạt động rất hiệu quả.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 

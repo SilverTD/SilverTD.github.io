@@ -111,7 +111,7 @@ Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $R = \\{ r_{lj} \\}$ là ma trận chứa các biến $r_{lj}$ với ý nghĩa lượng nhân lực tối thiểu cần cho ca làm việc $j$ của công xưởng $l$.
 ##  2.3. Các ràng buộc
-Ta sẽ xét ngày thứ $k$ $\rightarrow$ công xưởng thứ $l$ $\rightarrow$ ca làm việc thứ j:
+Ta sẽ xét ngày thứ $k$ $\rightarrow$ công xưởng thứ $l$ $\rightarrow$ ca làm việc thứ $j$:
 1. Các công nhân chỉ làm các ca có đúng kĩ năng của mình:
 
 $$

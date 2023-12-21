@@ -99,9 +99,9 @@ File xử lý bằng tay để kiểm tra code hoạt động ổn: [processed_l
 ## 2.2. Các biến số
 Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ij} \\}$ là ma trận chứa các biến $x_{ij}$ với ý nghĩa công nhân $i$ được chọn làm ca thứ $j$ hay không.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ilj} \\}$ là ma trận chứa các biến $x_{ij}$ với ý nghĩa công nhân $i$ được chọn làm ca thứ $j$ của công xưởng $l$ hay không.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B = \\{b_{ij} \\}$ là ma trận chứa các biến $b_{ij}$ với ý nghĩa công nhân thứ $i$ có kĩ năng $j$ hay không.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B = \\{b_{ilj} \\}$ là ma trận chứa các biến $b_{ilj}$ với ý nghĩa công nhân thứ $i$ có kĩ năng $j$ của công xưởng $l$ hay không.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $D = \\{d_{i} \\}$ là ma trận chứa các biến $d_{i}$ với ý nghĩa tổng số ngày làm việc của công nhân $i$ cho đến hiện tại.
 
@@ -109,14 +109,14 @@ Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $W = \\{ w_{i} \\}$ là ma trận chứa các biến $w_{i}$ với ý nghĩa công nhân thứ $i$ có được làm ca hiện tại hay không.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $R = \\{ r_{j} \\}$ là ma trận chứa các biến $r_{j}$ với ý nghĩa lượng nhân lực tối thiểu cần cho ca làm việc $j$.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $R = \\{ r_{lj} \\}$ là ma trận chứa các biến $r_{lj}$ với ý nghĩa lượng nhân lực tối thiểu cần cho ca làm việc $j$ của công xưởng $l$.
 ##  2.3. Các ràng buộc
-Ta sẽ xét từng ca trong mỗi ngày, ta xét ngày thứ $l$:
+Ta sẽ xét ngày thứ $k$ $\rightarrow$ công xưởng thứ $l$ $\rightarrow$ ca làm việc thứ j:
 1. Các công nhân chỉ làm các ca có đúng kĩ năng của mình:
 
 $$
 \begin{aligned}
-x_{ij} \leq b_{ij} \ \ \ \forall i, j > 0
+x_{ilj} \leq b_{ilj} \ \ \ \forall i, l, j > 0
 \end{aligned} 
 $$
 
@@ -124,15 +124,15 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{j}^{}x_{ij} \leq 1 \ \ \ \forall i, j > 0
+\sum\limits_{j}^{}x_{ilj} \leq 1 \ \ \ \forall i, l > 0
 \end{aligned} 
 $$
 
-3. Tổng công nhân làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{j}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các công nhân chỉ làm một ca duy nhất trong ngày và các công nhân làm ca đêm hôm trước sẽ không làm ca sáng hôm nay:
+3. Tổng công nhân làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{lj}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các công nhân chỉ làm một ca duy nhất trong ngày và các công nhân làm ca đêm hôm trước sẽ không làm ca sáng hôm nay:
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}(x_{ij} * w_{i}) \geq r_{j} \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}(x_{ilj} * w_{i}) \geq r_{lj} \ \ \ \forall l, j > 0
 \end{aligned} 
 $$
 
@@ -140,7 +140,7 @@ $$
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}(x_{ij} + d_{i}) \leq 24 \ \ \ \forall i, j > 0
+\sum\limits_{i}^{}(x_{ilj} + d_{i}) \leq 24 \ \ \ \forall l, j > 0
 \end{aligned} 
 $$
 
@@ -154,14 +154,28 @@ $$
 Tiếp theo ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
 
 $$
-F_{2} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * d_{i})
+F_{2} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * d_{i} * C(i))
 $$
 
 Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
 
 $$
-F_{3} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * n_{i})
+F_{3} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * n_{i} * C(i))
 $$
+
+Với hàm số $C(i)$ (ta có thể xây dựng bằng cách dùng ma trận hoặc công thức toán học), ta định nghĩa như sau:
+
+$$
+\begin{equation*}
+C(i) = 
+\begin{cases}
+      C & \text{nếu công nhân i có nhiều hơn 1 kĩ năng} \\
+      1 & \text{ngược lại}
+\end{cases}
+\end{equation*}
+$$
+
+Điều đó có nghĩa, ta sẽ ưu tiên lựa chọn các công nhân có nhiều hơn một kĩ năng, như thế sẽ tránh trường hợp thiếu công nhân của các xưởng khác.
 
 Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$ và thêm các trọng số sao cho hợp lý nhất:
 
@@ -169,7 +183,8 @@ $$
 OP = F_1 + A * F_2 + B * F_3
 $$
 
-Với A và B là các hằng số, do ta ưu tiên độ công bằng ngày làm việc giữa các công nhân hơn nên hằng số A lớn hơn hằng số B.
+Với $A$ và $B$ là các hằng số, do ta luôn ưu tiên độ công bằng các ca làm việc giữa các công nhân hơn nên hằng số $A$ lớn hơn hằng số $B$.
+
 ## 2.5. Áp dụng mô hình
 ### 2.5.1 Dữ liệu 1
 **Dữ liệu** 1 ý (a) với 17 nhân sự, tổng công là 330.
@@ -196,23 +211,23 @@ Một số công nhân có số ngày ít thường là các công nhân chỉ c
 ### 2.5.2 Dữ liệu 2
 **Dữ liệu** 2 ý (a) với 55 nhân sự, tổng công là 1116.
 
-Có một điều mà ta sẽ phải khá bất ngờ từ kết quả mà thuật toán ta tạo ra, dưới đây là đồ thị của kết quả:
+Dưới đây là đồ thị của kết quả:
 
-![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/81430989-204f-4254-918a-cccb58c05c76)
-![NQD_chart_2_2](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/99c3ebbc-0e64-48e7-86d8-9938dca15a64)
+![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/1eaf7025-4c33-4257-afc1-8f36954f1729)
+![NQD_chart_2_2](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/0df48706-a69d-4b68-ad77-4f260950e13f)
 
 
-Ở đồ thị (1), ta thấy được $max = 21$ và $min = 19$:
-- $max - min = 21 - 19 = 2$
+Ở đồ thị (1), ta thấy được $max = 24$ và $min = 16$:
+- $max - min = 24 - 16 = 8$
 - Trung bình: $\overline{x} \approx 20.29$
-- Độ lệch chuẩn: $\sigma \approx 0.62$
+- Độ lệch chuẩn: $\sigma \approx 2.89$
 
-Tương tự ở đồ thị (2), ta thấy được $max = 11$ và $min = 3$:
-- $max - min = 11 - 3 = 8$
+Tương tự ở đồ thị (2), ta thấy được $max = 16$ và $min = 0$:
+- $max - min = 16 - 0 = 16$
 - Trung bình: $\overline{x} \approx 6.49$
-- Độ lệch chuẩn: $\sigma \approx 1.63$
+- Độ lệch chuẩn: $\sigma \approx 4.36$
 
-Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta rất tốt, ở đồ thị (1) có độ lệch chuẩn chỉ 0.62, nên các dữ liệu phân bố khá đồng đều với $max - min = 2$. Tương tự với đồ thị (2), ta thấy độ lệch chuẩn chỉ có $1.63$, nó cực kì tốt đối với độ lệch chuẩn như thế. Các dữ liệu phân bố đồng đều với $max - min = 8$. Như vậy, ta thấy mô hình của chúng ta vừa xây dựng hoạt động rất hiệu quả.
+Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta đã xuất hiện các nhược điểm. Kết quả của đồ thị (1) với độ lệch chuẩn $2.89$ và $max - min = 8$, có thể thấy các dữ liệu dao động quanh giá trị trung bình khá mạnh. Tương tự với đồ thị (2), thậm chí là có người làm việc hăng say tới 16 ca đêm :joy:	. Do đó, mô hình chúng ta vừa xây dựng không hẳn là quá tốt, nhưng vẫn có thể chấp nhận được (hoặc không). Đây cũng chính là cái hay của toán mô hình, ta có thể xây dựng nhiều mô hình khác nhau và so sánh kết quả của chúng.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
@@ -231,6 +246,8 @@ Chắc chắn là do mô hình còn quá đơn giản nên không thực sự qu
 Ở đây có rất nhiều cách cải thiện và phát triển thêm khác nhau, riêng mình sau khi tham khảo bài làm của đội trường chuyên <b>KHTN</b> thì mình thấy các bạn thêm vào "Độ bất mãn" trông cũng khá hay.
 
 Mô hình chúng ta đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
+
+**Lưu ý:** Trong quá trình làm việc, sau khi mô hình đã cho ra kết quả thì ta cần phải tạo một <b>Checker</b> để kiểm tra lại kết quả, xem kết quả đã thỏa mãn các ràng buộc hay chưa ? Vì cho dù kết quả có tối ưu, độ lệch chuẩn chỉ $0.1$ nhưng vi phạm điều kiện thì mọi thứ đều vô nghĩa.
 
 # 3. Tổng kết
 Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đăng giải quyết câu a. Nhưng nếu bạn đã đọc bài viết của mình, các bạn sẽ nắm được những gì bài toán yêu cầu và hướng đi, từ đó hình thành tư duy để giải quyết nốt các phần còn lại của bài toán. Do đây là toán mô hình, nên không có một lời giải cụ thể duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 

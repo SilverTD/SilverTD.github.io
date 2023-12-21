@@ -99,7 +99,7 @@ File xử lý bằng tay để kiểm tra code hoạt động ổn: [processed_l
 ## 2.2. Các biến số
 Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ilj} \\}$ là ma trận chứa các biến $x_{ij}$ với ý nghĩa công nhân $i$ được chọn làm ca thứ $j$ của công xưởng $l$ hay không.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ilj} \\}$ là ma trận chứa các biến $x_{ilj}$ với ý nghĩa công nhân $i$ được chọn làm ca thứ $j$ của công xưởng $l$ hay không.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B = \\{b_{ilj} \\}$ là ma trận chứa các biến $b_{ilj}$ với ý nghĩa công nhân thứ $i$ có kĩ năng $j$ của công xưởng $l$ hay không.
 
@@ -148,19 +148,19 @@ $$
 Mục tiêu mà chúng ta cần tối ưu đầu tiên là số lượng công nhân tham gia làm việc luôn phải là nhỏ nhất:
 
 $$
-F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ij}
+F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ilj}
 $$
 
 Tiếp theo ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
 
 $$
-F_{2} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * d_{i} * C(i))
+F_{2} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ilj} * d_{i} * C(i))
 $$
 
 Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
 
 $$
-F_{3} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ij} * n_{i} * C(i))
+F_{3} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ilj} * n_{i} * C(i))
 $$
 
 Với hàm số $C(i)$ (ta có thể xây dựng bằng cách dùng ma trận hoặc công thức toán học), ta định nghĩa như sau:
@@ -177,13 +177,13 @@ $$
 
 Điều đó có nghĩa, ta sẽ ưu tiên lựa chọn các công nhân có nhiều hơn một kĩ năng, như thế sẽ tránh trường hợp thiếu công nhân của các xưởng khác.
 
-Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$ và thêm các trọng số sao cho hợp lý nhất:
+Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$ và thêm vào các trọng số sao cho hợp lý nhất:
 
 $$
 OP = F_1 + A * F_2 + B * F_3
 $$
 
-Với $A$ và $B$ là các hằng số, do ta luôn ưu tiên độ công bằng các ca làm việc giữa các công nhân hơn nên hằng số $A$ lớn hơn hằng số $B$.
+Với $A$ và $B$ là các hằng số, do ta luôn ưu tiên độ công bằng các ca làm việc giữa các công nhân hơn nên hằng số $A$ lớn hơn hằng số $B$. Hàm mục tiêu $OP$ càng nhỏ khi các công nhân được chọn có số ngày và số ca đêm làm việc càng nhỏ.
 
 ## 2.5. Áp dụng mô hình
 ### 2.5.1 Dữ liệu 1

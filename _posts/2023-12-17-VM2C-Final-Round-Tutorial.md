@@ -227,7 +227,7 @@ Tương tự ở đồ thị (2), ta thấy được $max = 16$ và $min = 0$:
 - Trung bình: $\overline{x} \approx 6.49$
 - Độ lệch chuẩn: $\sigma \approx 4.36$
 
-Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta đã xuất hiện các nhược điểm. Kết quả của đồ thị (1) với độ lệch chuẩn $2.89$ và $max - min = 8$, có thể thấy các dữ liệu dao động quanh giá trị trung bình khá mạnh. Tương tự với đồ thị (2), thậm chí là có người làm việc hăng say tới 16 ca đêm :joy:	. Do đó, mô hình chúng ta vừa xây dựng không hẳn là quá tốt, nhưng vẫn có thể chấp nhận được (hoặc không). Đây cũng chính là cái hay của toán mô hình, ta có thể xây dựng nhiều mô hình khác nhau và so sánh kết quả của chúng.
+Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta đã xuất hiện các nhược điểm. Kết quả của đồ thị (1) với độ lệch chuẩn $2.89$ và $max - min = 8$, có thể thấy các dữ liệu dao động quanh giá trị trung bình khá mạnh. Tương tự với đồ thị (2), thậm chí là có người làm việc hăng say tới 16 ca đêm 😂	. Do đó, mô hình chúng ta vừa xây dựng không hẳn là quá tốt, nhưng vẫn có thể chấp nhận được (hoặc không). Đây cũng chính là cái hay của toán mô hình, ta có thể xây dựng nhiều mô hình khác nhau và so sánh kết quả của chúng.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 

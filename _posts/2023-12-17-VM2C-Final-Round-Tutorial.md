@@ -1,7 +1,7 @@
 ---
 
 title: VM2C Final Round Tutorial
-thumbnail: https://github.com/SilverTD/SilverTD.github.io/assets/55396370/4797838e-842e-4295-9805-f1e1e38353e9
+thumbnail: https://github.com/SilverTD/SilverTD.github.io/assets/55396370/1379c360-d2f9-4e3f-8654-4a70c4624676
 description: Ở bài toán VM2C vòng 2, chúng ta sẽ phải đi giải quyết vấn đề về sắp xếp lịch cho các công nhân sao cho là công bằng và tối ưu nhất có thể...
 
 ---

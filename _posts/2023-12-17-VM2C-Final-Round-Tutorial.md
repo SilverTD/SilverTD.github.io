@@ -186,6 +186,9 @@ $$
 Với $A$ và $B$ là các hằng số, do ta luôn ưu tiên độ công bằng các ca làm việc giữa các công nhân hơn nên hằng số $A$ lớn hơn hằng số $B$. Hàm mục tiêu $OP$ càng nhỏ khi các công nhân được chọn có số ngày và số ca đêm làm việc càng nhỏ.
 
 ## 2.5. Áp dụng mô hình
+
+> Vớ cả 2 bộ dữ liệu ta đều chọn 3 hằng số $A = 10$, $B = 1$, $C = 5$.
+
 ### 2.5.1 Dữ liệu 1
 **Dữ liệu** 1 ý (a) với 17 nhân sự, tổng công là 330.
 
@@ -227,7 +230,84 @@ Tương tự ở đồ thị (2), ta thấy được $max = 16$ và $min = 0$:
 - Trung bình: $\overline{x} \approx 6.49$
 - Độ lệch chuẩn: $\sigma \approx 4.36$
 
-Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta đã xuất hiện các nhược điểm. Kết quả của đồ thị (1) với độ lệch chuẩn $2.89$ và $max - min = 8$, có thể thấy các dữ liệu dao động quanh giá trị trung bình khá mạnh. Tương tự với đồ thị (2), thậm chí là có người làm việc hăng say tới 16 ca đêm 😂	. Do đó, mô hình chúng ta vừa xây dựng không hẳn là quá tốt, nhưng vẫn có thể chấp nhận được (hoặc không). Đây cũng chính là cái hay của toán mô hình, ta có thể xây dựng nhiều mô hình khác nhau và so sánh kết quả của chúng.
+Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta đã xuất hiện các nhược điểm. Kết quả của đồ thị (1) với độ lệch chuẩn $2.89$ và $max - min = 8$, có thể thấy các dữ liệu dao động quanh giá trị trung bình khá mạnh. Tương tự với đồ thị (2), thậm chí là có người làm việc hăng say tới 16 ca đêm 😂	.
+
+Tuy nhiên, khoan hãy vội kết luận mô hình chúng ta hoạt động không ổn. Nếu mô hình cho ra kết quả không tốt thì có thể do 3 hằng số $A$, $B$, $C$ của chúng ta chọn chưa tốt. Hãy thử lại với nhiều hằng số $A$, $B$, $C$ khác nhau:
+
+```
+	    ________________________________________________________________________________
+
+            Data with constants: A = 5, B = 5, C = 2.
+            The standard deviation between workers' shifts:		3.5145035975497434
+            The standard deviation between workers' night shifts:	4.785860717772443
+            ________________________________________________________________________________
+
+            Data with constants: A = 10, B = 5, C = 2.
+            The standard deviation between workers' shifts:      	3.1140311627606794
+            The standard deviation between workers' night shifts:	4.443064983351132
+            ________________________________________________________________________________
+
+            Data with constants: A = 10, B = 10, C = 2.
+            The standard deviation between workers' shifts:      	3.5145035975497434
+            The standard deviation between workers' night shifts:	4.785860717772443
+            ________________________________________________________________________________
+
+	    Data with constants: A = 10, B = 5, C = 5.
+            The standard deviation between workers' shifts:      	3.166143207424035
+            The standard deviation between workers' night shifts:	4.360453384570034
+            ________________________________________________________________________________
+            
+	    Data with constants: A = 10, B = 1, C = 5.
+            The standard deviation between workers' shifts:      	2.914994010739066
+            The standard deviation between workers' night shifts:	4.25920490775931
+            ________________________________________________________________________________
+	    Data with constants: A = 10, B = 1, C = 2.
+            The standard deviation between workers' shifts:      	2.8646607114518003
+            The standard deviation between workers' night shifts:	4.280495839047058
+            ________________________________________________________________________________
+
+            Data with constants: A = 10, B = 1, C = 1.5.
+            The standard deviation between workers' shifts:      	2.8069571183868858
+            The standard deviation between workers' night shifts:	3.9811954681190795
+            ________________________________________________________________________________
+            
+            Data with constants: A = 10, B = 1, C = 1.3.
+            The standard deviation between workers' shifts:      	2.3868787322871325 <-- (Best Result)
+            The standard deviation between workers' night shifts:	2.8404399612654587 <-- (Best Result)
+            ________________________________________________________________________________
+            
+            Data with constants: A = 5, B = 1, C = 1.3.
+            The standard deviation between workers' shifts:      	2.584377732542751
+            The standard deviation between workers' night shifts:	3.1844664303900254
+            ________________________________________________________________________________
+            
+            Data with constants: A = 5, B = 2, C = 1.3.
+            The standard deviation between workers' shifts:      	2.7414178632281594
+            The standard deviation between workers' night shifts:	3.64254020891379
+            ________________________________________________________________________________
+            
+            Data with constants: A = 2, B = 1, C = 1.5.
+            The standard deviation between workers' shifts:      	3.1140311627606794
+            The standard deviation between workers' night shifts:	4.168595696711859
+            ________________________________________________________________________________
+```
+
+Và như chúng ta thấy, mô hình cho ra kết quả tối nhất đối với 3 hằng số $A = 10$, $B = 1$, $C = 1.3$, bên dưới là đồ thị của kết quả này:
+
+![NQD_chart_1_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/e1fc913b-bb0e-4a47-b957-c12e286246f7)
+![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/94c82ec0-2499-4aa2-8b9e-47c55f9849b5)
+
+Ở đồ thị (1), ta thấy được $max = 24$ và $min = 17$:
+- $max - min = 24 - 17 = 7$
+- Trung bình: $\overline{x} \approx 20.29$
+- Độ lệch chuẩn: $\sigma \approx 2.38$
+
+Tương tự ở đồ thị (2), ta thấy được $max = 12$ và $min = 0$:
+- $max - min = 12 - 0 = 12$
+- Trung bình: $\overline{x} \approx 6.49$
+- Độ lệch chuẩn: $\sigma \approx 2.84$
+
+Từ đó ta thấy rằng, chỉ việc thay đổi 3 hằng số $A$, $B$, $C$. Kết quả của chúng ta đã cải thiện rõ rệt, độ lệch chuẩn từ $2.89 \rightarrow 2.38$ đối với đồ thị (1) và từ $4.36 \rightarrow 2.84$ đối với đồ thị (2). 
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
@@ -240,7 +320,7 @@ Mọi ý tưởng và hướng đi mình vừa trình bày ở bên trên, đề
 Kết quả mà chúng ta vừa tìm được trông khá ổn.
 
 ### 2.6.2. Nhược điểm
-Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu.
+Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu, đồng thời ta đã bỏ qua nhiều vấn đề thực tế khác.
 
 ### 2.6.3. Cải thiện
 Ở đây có rất nhiều cách cải thiện và phát triển thêm khác nhau, riêng mình sau khi tham khảo bài làm của đội trường chuyên <b>KHTN</b> thì mình thấy các bạn thêm vào "Độ bất mãn" trông cũng khá hay.

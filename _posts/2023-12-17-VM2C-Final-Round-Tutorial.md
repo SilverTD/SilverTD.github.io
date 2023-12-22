@@ -154,13 +154,13 @@ $$
 Tiếp theo ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
 
 $$
-F_{2} = \sum\limits_{i, \ j}\[x_{ilj} * d_{i} * C(i)\]
+F_{2} = \sum\limits_{i, \ j}[x_{ilj} * d_{i} * C(i)]
 $$
 
 Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
 
 $$
-F_{3} = \sum\limits_{i, \ j}\[x_{ilj} * n_{i} * C(i)\]
+F_{3} = \sum\limits_{i, \ j}[x_{ilj} * n_{i} * C(i)]
 $$
 
 Với $C(i)$ ta định nghĩa như sau:

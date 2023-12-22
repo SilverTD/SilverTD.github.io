@@ -242,10 +242,10 @@ Tuy nhiên đó chưa phải là kết quả tốt nhất mà mô hình có th�
 
 Do đó ta có thể giảm số ngày tối đa từ $24 \rightarrow 22$, điều này giúp sự chênh lệch các ngày làm việc giữa các nhân sự giảm xuống rất nhiều. Sau khi áp dụng, bên dưới là đồ thị của kết quả:
 
-![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/f1e95547-103f-4b49-b499-b0d6f0833d33)
-![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/77310915-d374-40cb-b87c-f79c74e097f6)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/61aefb29-9057-4547-bca9-a52bff886933)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/9e94d4ae-967f-4b2d-9254-07d1574c471d)
 
-Độ lệch chuẩn lúc này là $1.48$ đối với các ngày làm việc và $1.93$ đối với các ca đêm làm việc, và $max - min = 5$ đối với các ngày làm việc và $max - min = 9$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện và tốt hơn rất nhiều.
+Độ lệch chuẩn lúc này là $1.49$ đối với các ngày làm việc và $1.70$ đối với các ca đêm làm việc, và $max - min = 5$ đối với các ngày làm việc và $max - min = 9$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện và tốt hơn rất nhiều.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 

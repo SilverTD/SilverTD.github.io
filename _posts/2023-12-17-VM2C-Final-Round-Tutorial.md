@@ -187,7 +187,7 @@ Với $A$ và $B$ là các hằng số, do ta luôn ưu tiên độ công bằng
 
 ## 2.5. Áp dụng mô hình
 
-> Vớ cả 2 bộ dữ liệu ta đều chọn 3 hằng số $A = 10$, $B = 1$, $C = 5$.
+> Với cả 2 bộ dữ liệu ta đều chọn 3 hằng số $A = 10$, $B = 1$, $C = 5$.
 
 ### 2.5.1 Dữ liệu 1
 **Dữ liệu** 1 ý (a) với 17 nhân sự, tổng công là 330.
@@ -309,6 +309,14 @@ Tương tự ở đồ thị (2), ta thấy được $max = 12$ và $min = 0$:
 
 Từ đó ta thấy rằng, chỉ việc thay đổi 3 hằng số $A$, $B$, $C$. Kết quả của chúng ta đã cải thiện rõ rệt, độ lệch chuẩn từ $2.89 \rightarrow 2.38$ đối với đồ thị (1) và từ $4.36 \rightarrow 2.84$ đối với đồ thị (2). 
 
+Tuy nhiên đó chưa phải là kết quả tốt nhất mà mô hình có thể đạt được. Từ đề bài "mỗi nhân sự được phép làm tối đa 24 ngày trong 4 tuần", điều đó có nghĩa mỗi nhân sự cũng có thể làm tối đa $22$ ngày và nó không vi phạm đề bài.
+
+Do đó ta có thể giảm số ngày tối đa từ $24 \rightarrow 22$, điều này giúp sự chênh lệch các ngày làm việc giữa các nhân sự giảm xuống rất nhiều. Sau khi áp dụng, bên dưới là đồ thị của kết quả:
+
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/0143c35c-3ca4-4b1c-8c44-cfd45b5e7457)
+
+Độ lệch chuẩn lúc này là $1.59$ đối với các ngày làm việc và $3.07$ đối với các ca đêm làm việc, và $max - min = 4$ đối với các ngày làm việc và $max - min = 13$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện rất nhiều.
+
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
 Mọi ý tưởng và hướng đi mình vừa trình bày ở bên trên, đều là những ý tưởng, suy nghĩ của mình khi đang làm bài thi ở viện nghiên cứu <b>VIASM</b>: [VM2C_Vong2](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Vong2 "VM2C Vong2")
@@ -323,9 +331,11 @@ Kết quả mà chúng ta vừa tìm được trông khá ổn.
 Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu, đồng thời ta đã bỏ qua nhiều vấn đề thực tế khác.
 
 ### 2.6.3. Cải thiện
-Ở đây có rất nhiều cách cải thiện và phát triển thêm khác nhau, riêng mình sau khi tham khảo bài làm của đội trường chuyên <b>KHTN</b> thì mình thấy các bạn thêm vào "Độ bất mãn" trông cũng khá hay.
+Mô hình có thể cho ra kết quả tốt hơn, nếu các hằng số $A$, $B$, $C$ được chọn tốt. Tương tự, ta có thể cải thiện kết quả lên rất nhiều nếu ta giảm số ngày tối đa làm việc xuống (điều này không vi phạm đề bài).
 
 Mô hình chúng ta đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
+
+Hoặc như đội <b>HSGS</b> đã cho vào "Độ bất mãn" để tối ưu kết quả, đây hoàn toàn là một ý tưởng khá hay và sáng tạo. Chúng ta có thể học hỏi theo cách làm đấy.
 
 **Lưu ý:** Trong quá trình làm việc, sau khi mô hình đã cho ra kết quả thì ta cần phải tạo một <b>Checker</b> để kiểm tra lại kết quả, xem kết quả đã thỏa mãn các ràng buộc hay chưa ? Vì cho dù kết quả có tối ưu, độ lệch chuẩn chỉ $0.1$ nhưng vi phạm điều kiện thì mọi thứ đều vô nghĩa.
 

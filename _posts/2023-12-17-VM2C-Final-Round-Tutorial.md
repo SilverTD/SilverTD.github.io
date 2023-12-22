@@ -148,22 +148,22 @@ $$
 Mục tiêu mà chúng ta cần tối ưu đầu tiên là số lượng công nhân tham gia làm việc luôn phải là nhỏ nhất:
 
 $$
-F_{1} = \sum\limits_{i}\sum\limits_{j}^{}x_{ilj}
+F_{1} = \sum\limits_{i, \ j}x_{ilj}
 $$
 
 Tiếp theo ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
 
 $$
-F_{2} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ilj} * d_{i} * C(i))
+F_{2} = \sum\limits_{i, \ j}\[x_{ilj} * d_{i} * C(i)\]
 $$
 
 Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
 
 $$
-F_{3} = \sum\limits_{i}\sum\limits_{j}^{}(x_{ilj} * n_{i} * C(i))
+F_{3} = \sum\limits_{i, \ j}\[x_{ilj} * n_{i} * C(i)\]
 $$
 
-Với hàm số $C(i)$ (ta có thể xây dựng bằng cách dùng ma trận hoặc công thức toán học), ta định nghĩa như sau:
+Với $C(i)$ ta định nghĩa như sau:
 
 $$
 \begin{equation*}
@@ -177,145 +177,75 @@ $$
 
 Điều đó có nghĩa, ta sẽ ưu tiên lựa chọn các công nhân có nhiều hơn một kĩ năng, như thế sẽ tránh trường hợp thiếu công nhân của các xưởng khác.
 
-Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$ và thêm vào các trọng số sao cho hợp lý nhất:
+Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$:
 
 $$
-OP = F_1 + A * F_2 + B * F_3
+OP = F_1 + (1 - A) * F_2 + A * F_3
 $$
 
-Với $A$ và $B$ là các hằng số, do ta luôn ưu tiên độ công bằng các ca làm việc giữa các công nhân hơn nên hằng số $A$ lớn hơn hằng số $B$. Hàm mục tiêu $OP$ càng nhỏ khi các công nhân được chọn có số ngày và số ca đêm làm việc càng nhỏ.
+Với $A$ được định nghĩa như sau:
+
+$$
+\begin{equation*}
+A = 
+\begin{cases}
+      1 & \text{nếu ca hiện tại là ca đêm} \\
+      0 & \text{ngược lại}
+\end{cases}
+\end{equation*}
+$$
 
 ## 2.5. Áp dụng mô hình
-
-> Với cả 2 bộ dữ liệu ta đều chọn 3 hằng số $A = 10$, $B = 1$, $C = 5$.
-
 ### 2.5.1 Dữ liệu 1
 **Dữ liệu** 1 ý (a) với 17 nhân sự, tổng công là 330.
 
 Sau khi áp dụng mô hình trên với bộ dữ liệu 1 thì ta thu được kết quả như đồ thị dưới đây. Về cơ bản đây là một kết quả khá tốt đối với một mô hình khá đơn giản như của chúng ta đã làm.
 
-![NQD_chart_1](https://github.com/SilverTD/Stuffs/assets/55396370/9f710531-5afa-43ed-98e8-627e39b171f3)
-![NQD_chart_2](https://github.com/SilverTD/Stuffs/assets/55396370/8ed936d1-d230-45b4-8427-b0320bab11b4)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/3cc719ec-0c96-40d4-a373-2e1b088a2924)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/fd0dba9d-bad9-457d-a7c8-7f10ce10db54)
 
-Ở đồ thị (1), ta thấy được $max = 22$ và $min = 16$:
-- $max - min = 22 - 16 = 6$
+Ở đồ thị (1), ta thấy được $max = 23$ và $min = 16$:
+- $max - min = 23 - 16 = 7$
 - Trung bình: $\overline{x} \approx 19.41$
-- Độ lệch chuẩn: $\sigma \approx 2.14$
+- Độ lệch chuẩn: $\sigma \approx 2.17$
 
-Tương tự ở đồ thị (2), ta thấy được $max = 10$ và $min = 3$:
-- $max - min = 10 - 3 = 7$
+Tương tự ở đồ thị (2), ta thấy được $max = 8$ và $min = 5$:
+- $max - min = 8 - 5 = 3$
 - Trung bình: $\overline{x} \approx 6.17$
-- Độ lệch chuẩn: $\sigma \approx 2.3$
+- Độ lệch chuẩn: $\sigma \approx 0.98$
 
 Từ các số liệu vừa tính toán ở trên, ta thấy được kết quả của chúng ta không hẳn là quá tệ. Các dữ liệu phân tán có thể xem là khá đồng đều.
 
-Một số công nhân có số ngày ít thường là các công nhân chỉ có kỹ năng "Rot", vì trong mỗi ca, kỹ năng "Rot" chỉ cần 1 người làm duy nhất. Nên hiển nhiên các công nhân đó có số ca làm việc ít hơn.
+Đặc biệt dễ thấy ở ca đêm, với độ lệch chuẩn chỉ $0.98$. Điều này cho thấy các ca đêm rất công bằng.
 
 ### 2.5.2 Dữ liệu 2
 **Dữ liệu** 2 ý (a) với 55 nhân sự, tổng công là 1116.
 
 Dưới đây là đồ thị của kết quả:
 
-![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/1eaf7025-4c33-4257-afc1-8f36954f1729)
-![NQD_chart_2_2](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/0df48706-a69d-4b68-ad77-4f260950e13f)
-
-
-Ở đồ thị (1), ta thấy được $max = 24$ và $min = 16$:
-- $max - min = 24 - 16 = 8$
-- Trung bình: $\overline{x} \approx 20.29$
-- Độ lệch chuẩn: $\sigma \approx 2.89$
-
-Tương tự ở đồ thị (2), ta thấy được $max = 16$ và $min = 0$:
-- $max - min = 16 - 0 = 16$
-- Trung bình: $\overline{x} \approx 6.49$
-- Độ lệch chuẩn: $\sigma \approx 4.36$
-
-Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình của chúng ta đã xuất hiện các nhược điểm. Kết quả của đồ thị (1) với độ lệch chuẩn $2.89$ và $max - min = 8$, có thể thấy các dữ liệu dao động quanh giá trị trung bình khá mạnh. Tương tự với đồ thị (2), thậm chí là có người làm việc hăng say tới 16 ca đêm 😂	.
-
-Tuy nhiên, khoan hãy vội kết luận mô hình chúng ta hoạt động không ổn. Nếu mô hình cho ra kết quả không tốt thì có thể do 3 hằng số $A$, $B$, $C$ của chúng ta chọn chưa tốt. Hãy thử lại với nhiều hằng số $A$, $B$, $C$ khác nhau:
-
-```
-	    ________________________________________________________________________________
-
-            Data with constants: A = 5, B = 5, C = 2.
-            The standard deviation between workers' shifts:		3.5145035975497434
-            The standard deviation between workers' night shifts:	4.785860717772443
-            ________________________________________________________________________________
-
-            Data with constants: A = 10, B = 5, C = 2.
-            The standard deviation between workers' shifts:      	3.1140311627606794
-            The standard deviation between workers' night shifts:	4.443064983351132
-            ________________________________________________________________________________
-
-            Data with constants: A = 10, B = 10, C = 2.
-            The standard deviation between workers' shifts:      	3.5145035975497434
-            The standard deviation between workers' night shifts:	4.785860717772443
-            ________________________________________________________________________________
-
-	    Data with constants: A = 10, B = 5, C = 5.
-            The standard deviation between workers' shifts:      	3.166143207424035
-            The standard deviation between workers' night shifts:	4.360453384570034
-            ________________________________________________________________________________
-            
-	    Data with constants: A = 10, B = 1, C = 5.
-            The standard deviation between workers' shifts:      	2.914994010739066
-            The standard deviation between workers' night shifts:	4.25920490775931
-            ________________________________________________________________________________
-	    Data with constants: A = 10, B = 1, C = 2.
-            The standard deviation between workers' shifts:      	2.8646607114518003
-            The standard deviation between workers' night shifts:	4.280495839047058
-            ________________________________________________________________________________
-
-            Data with constants: A = 10, B = 1, C = 1.5.
-            The standard deviation between workers' shifts:      	2.8069571183868858
-            The standard deviation between workers' night shifts:	3.9811954681190795
-            ________________________________________________________________________________
-            
-            Data with constants: A = 10, B = 1, C = 1.3.
-            The standard deviation between workers' shifts:      	2.3868787322871325 <-- (Best Result)
-            The standard deviation between workers' night shifts:	2.8404399612654587 <-- (Best Result)
-            ________________________________________________________________________________
-            
-            Data with constants: A = 5, B = 1, C = 1.3.
-            The standard deviation between workers' shifts:      	2.584377732542751
-            The standard deviation between workers' night shifts:	3.1844664303900254
-            ________________________________________________________________________________
-            
-            Data with constants: A = 5, B = 2, C = 1.3.
-            The standard deviation between workers' shifts:      	2.7414178632281594
-            The standard deviation between workers' night shifts:	3.64254020891379
-            ________________________________________________________________________________
-            
-            Data with constants: A = 2, B = 1, C = 1.5.
-            The standard deviation between workers' shifts:      	3.1140311627606794
-            The standard deviation between workers' night shifts:	4.168595696711859
-            ________________________________________________________________________________
-```
-
-Và như chúng ta thấy, mô hình cho ra kết quả tối nhất đối với 3 hằng số $A = 10$, $B = 1$, $C = 1.3$, bên dưới là đồ thị của kết quả này:
-
-![NQD_chart_1_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/e1fc913b-bb0e-4a47-b957-c12e286246f7)
-![NQD_chart_2_1](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/94c82ec0-2499-4aa2-8b9e-47c55f9849b5)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/075e9dcd-952f-4914-9323-9076bd09f703)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/0fa0289e-6dd0-4372-a77b-d1c82c85b30d)
 
 Ở đồ thị (1), ta thấy được $max = 24$ và $min = 17$:
 - $max - min = 24 - 17 = 7$
 - Trung bình: $\overline{x} \approx 20.29$
-- Độ lệch chuẩn: $\sigma \approx 2.38$
+- Độ lệch chuẩn: $\sigma \approx 2.22$
 
-Tương tự ở đồ thị (2), ta thấy được $max = 12$ và $min = 0$:
-- $max - min = 12 - 0 = 12$
+Tương tự ở đồ thị (2), ta thấy được $max = 9$ và $min = 1$:
+- $max - min = 9 - 1 = 8$
 - Trung bình: $\overline{x} \approx 6.49$
-- Độ lệch chuẩn: $\sigma \approx 2.84$
+- Độ lệch chuẩn: $\sigma \approx 1.70$
 
-Từ đó ta thấy rằng, chỉ việc thay đổi 3 hằng số $A$, $B$, $C$. Kết quả của chúng ta đã cải thiện rõ rệt, độ lệch chuẩn từ $2.89 \rightarrow 2.38$ đối với đồ thị (1) và từ $4.36 \rightarrow 2.84$ đối với đồ thị (2). 
+Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình đơn giản của chúng ta đã cho ra kết quả rất tốt và tối ưu. Độ lệch chuẩn ở đồ thị (1) là $2.22$ và $max - min = 7$, tương tự ở đồ thị (2) độ lệch chuẩn là $1.70$ và $max - min = 8$. Kết quả này là rất tốt.
 
 Tuy nhiên đó chưa phải là kết quả tốt nhất mà mô hình có thể đạt được. Từ đề bài "mỗi nhân sự được phép làm tối đa 24 ngày trong 4 tuần", điều đó có nghĩa mỗi nhân sự cũng có thể làm tối đa $22$ ngày và nó không vi phạm đề bài.
 
 Do đó ta có thể giảm số ngày tối đa từ $24 \rightarrow 22$, điều này giúp sự chênh lệch các ngày làm việc giữa các nhân sự giảm xuống rất nhiều. Sau khi áp dụng, bên dưới là đồ thị của kết quả:
 
-![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/0143c35c-3ca4-4b1c-8c44-cfd45b5e7457)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/f1e95547-103f-4b49-b499-b0d6f0833d33)
+![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/77310915-d374-40cb-b87c-f79c74e097f6)
 
-Độ lệch chuẩn lúc này là $1.59$ đối với các ngày làm việc và $3.07$ đối với các ca đêm làm việc, và $max - min = 4$ đối với các ngày làm việc và $max - min = 13$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện rất nhiều.
+Độ lệch chuẩn lúc này là $1.48$ đối với các ngày làm việc và $1.93$ đối với các ca đêm làm việc, và $max - min = 5$ đối với các ngày làm việc và $max - min = 9$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện và tốt hơn rất nhiều.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
@@ -331,7 +261,7 @@ Kết quả mà chúng ta vừa tìm được trông khá ổn.
 Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu, đồng thời ta đã bỏ qua nhiều vấn đề thực tế khác.
 
 ### 2.6.3. Cải thiện
-Mô hình có thể cho ra kết quả tốt hơn, nếu các hằng số $A$, $B$, $C$ được chọn tốt. Tương tự, ta có thể cải thiện kết quả lên rất nhiều nếu ta giảm số ngày tối đa làm việc xuống (điều này không vi phạm đề bài).
+Mô hình có thể cải thiện kết quả lên rất nhiều nếu ta giảm số ngày tối đa làm việc xuống (điều này không vi phạm đề bài).
 
 Mô hình chúng ta đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
 

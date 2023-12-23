@@ -7,11 +7,11 @@ description: Ở bài toán VM2C vòng 2, chúng ta sẽ phải đi giải quy�
 ---
 # 1. Giới thiệu
 ## 1.1. Giới thiệu về kỳ thi
-**Kỳ thi Mô hình hoá Toán học Việt Nam**  (Vietnam Mathematical Modelling Competition - viết tắt là VM2C) là kỳ thi mô hình hóa toán học lần đầu tiên được tổ chức ở Việt Nam, dựa theo mô hình tổ chức cuộc thi mô hình hóa uy tín trên thế giới.
+**Kỳ thi Mô hình hoá Toán học Việt Nam**  (Vietnam Mathematical Modelling Competition - viết tắt là VM2C) là kỳ thi mô hình hóa toán học lần đầu tiên được tổ chức ở Việt Nam, dựa theo mô hình tổ chức cuộc thi mô hình hóa uy tín trên thế giới. Do là lần đầu kỳ thi được tổ chức nên chỉ có khoảng $12 - 13$ trường chuyên được mời tham gia kỳ thi này.
 
 Kỳ thi gồm 2 vòng. Ở mỗi vòng, thử thách của các đội là tìm ra giải pháp cho một vấn đề mở, thường thì không giống các bài tập về nhà hay dự án nhóm trên lớp học thông thường. Kỹ năng quản lý thời gian, làm việc nhóm, viết và trình bày báo cáo cũng quan trọng không kém khả năng tìm hiểu các kiến thức mới và tư duy ứng dụng vào thực tế.
 
-Kỳ thi VM2C là một sân chơi bổ ích và thú vị, giúp các học sinh phát triển các kỹ năng cần thiết trong thực tế. Đội của mình rất vinh dự khi là một trong những đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này.
+Kỳ thi VM2C là một sân chơi bổ ích và thú vị, giúp các học sinh phát triển các kỹ năng cần thiết trong thực tế. Đội của mình cũng rất vinh dự khi đã đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này.
 
 ## 1.2. Cảm nhận về kỳ thi
 Kỳ thi này giúp mình có cảm giác như đang nhập vai thành một nhà khoa học thực thụ, phải tự tìm kiếm và nghiên cứu mọi thứ chứ không có sẵn công cụ nào cho mình.
@@ -198,6 +198,9 @@ $$
 Hàm mục tiêu $OP$ càng nhỏ khi nhân sự được chọn có số ngày làm việc hoặc số ca đêm làm việc càng nhỏ.
 
 ## 2.5. Áp dụng mô hình
+
+> Trong quá trình đánh giá kết quả của mô hình đưa ra, ta sử dụng thêm khái niệm "Độ lệch chuẩn". Độ lệch chuẩn, hay độ lệch tiêu chuẩn là một đại lượng thống kê mô tả dùng để đo mức độ phân tán của một tập dữ liệu đã được lập thành bảng tần số. Hiểu một cách đơn giản, độ lệch chuẩn càng lớn thì dữ liệu phân tán càng lớn và ngược lại (đây là kiến thức toán thống kê lớp 10).
+
 ### 2.5.1 Dữ liệu 1
 **Dữ liệu** 1 ý (a) với 17 nhân sự, tổng công là 330.
 
@@ -271,7 +274,7 @@ Mô hình có thể cải thiện kết quả lên rất nhiều nếu ta giảm
 
 Mô hình của chúng ta là đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các nhân sự có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như đội đến từ trường <b>chuyên Lê Hồng Phong</b> thì chọn tối ưu độ lệch chuẩn ($max - min$), thậm chí họ còn xây dựng một mô hình khác sử dụng "lý thuyết đồ thị" để giải quyết bài toán.
 
-Hoặc như đội đến từ trường <b>chuyên Khoa Học Tự Nhiên</b> đã cho thêm vào "Độ bất mãn" để tối ưu kết quả, đây hoàn toàn là một ý tưởng khá hay và sáng tạo. Chúng ta có thể học hỏi theo cách làm ấy.
+Hoặc như đội đến từ trường <b>chuyên Khoa Học Tự Nhiên</b> đã cho thêm vào "Độ bất mãn" để tối ưu kết quả, đây hoàn toàn là một ý tưởng rất hay và sáng tạo. Chúng ta có thể học hỏi theo cách làm ấy.
 
 Hay như đội đến từ trường <b>chuyên Lương Văn Chánh</b> đã sử dụng thuật toán tham lam để giải quyết bài toán này.
 
@@ -282,11 +285,10 @@ Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đ�
 
 Như ta thấy, mỗi đội đều có một cách riêng để giải quyết bài toán này. Đó chính là cái hay của toán mô hình, "không có một lời giải cụ thể duy nhất", vì vậy các bạn có thể tự tạo ra nhiều mô hình khác nhau và từ đó so sánh kết quả của chúng để chọn ra mô hình tốt nhất.
 
-Đây vốn dĩ là một cuộc thi khá hay phải không ? Nó hoàn toàn giúp chúng ta rèn luyện được khá nhiều kĩ năng có ích trong thực tế, và đây hoàn toàn là một cuộc thi xứng đáng để chúng ta trải nghiệm ít nhất một lần.
+Đây vốn dĩ là một cuộc thi rất tuyệt phải không ? Nó hoàn toàn giúp chúng ta rèn luyện được khá nhiều kĩ năng có ích trong thực tế, và đây hoàn toàn là một cuộc thi xứng đáng để chúng ta trải nghiệm ít nhất một lần.
 
 # 4. Một số hình ảnh
-![prize](https://github.com/SilverTD/Stuffs/assets/55396370/e74d2ecb-465e-4467-b1b2-1a8f859407aa)
-![prize2](https://github.com/SilverTD/Stuffs/assets/55396370/506fddfb-20cb-4f91-a4f3-52e1275d1f7a)
+![prize](https://github.com/SilverTD/Stuffs/assets/55396370/506fddfb-20cb-4f91-a4f3-52e1275d1f7a)
 ![vm2c](https://github.com/SilverTD/Stuffs/assets/55396370/910ab01c-cc78-47c1-a7a2-da9a1b308b2a)
 
 

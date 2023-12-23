@@ -269,11 +269,11 @@ Tuy nhìn mô hình trên đơn giản, nhưng việc triển khai nó bằng co
 ### 2.6.3. Cải thiện
 Mô hình có thể cải thiện kết quả lên rất nhiều nếu ta giảm số ngày tối đa làm việc xuống (điều này không vi phạm đề bài).
 
-Mô hình của chúng ta là đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các nhân sự có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như đội đến từ trường <b>chuyên Lê Hồng Phong</b> thì chọn tối ưu độ lệch chuẩn ($max - min$).
+Mô hình của chúng ta là đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các nhân sự có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như đội đến từ trường <b>chuyên Lê Hồng Phong</b> thì chọn tối ưu độ lệch chuẩn ($max - min$), thậm chí họ còn xây dựng một mô hình khác sử dụng "lý thuyết đồ thị" để giải quyết bài toán.
 
 Hoặc như đội đến từ trường <b>chuyên Khoa Học Tự Nhiên</b> đã cho thêm vào "Độ bất mãn" để tối ưu kết quả, đây hoàn toàn là một ý tưởng khá hay và sáng tạo. Chúng ta có thể học hỏi theo cách làm ấy.
 
-Hay như đội đến từ trường <b>chuyên Lương Văn Chánh</b> thì dùng thuật toán tham lam để giải quyết bài toán này.
+Hay như đội đến từ trường <b>chuyên Lương Văn Chánh</b> đã sử dụng thuật toán tham lam để giải quyết bài toán này.
 
 **Lưu ý:** Trong quá trình làm việc, sau khi mô hình đã cho ra kết quả thì ta cần phải tạo một <b>Checker</b> để kiểm tra lại kết quả, xem kết quả đã thỏa mãn các ràng buộc hay chưa ? Vì cho dù kết quả có tối ưu, độ lệch chuẩn chỉ $0.1$ nhưng vi phạm điều kiện thì mọi thứ đều vô nghĩa.
 

@@ -14,7 +14,7 @@ Kỳ thi gồm 2 vòng. Ở mỗi vòng, thử thách của các đội là tìm
 Kỳ thi VM2C là một sân chơi bổ ích và thú vị, giúp các học sinh phát triển các kỹ năng cần thiết cho thế kỷ 21. Đội của mình rất vinh dự khi là một trong những đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này.
 
 ## 1.2. Cảm nhận về kỳ thi
-Mình là người thích nghiên cứu nhưng lại ghét làm bài tập, vì vậy mình rất thích kỳ thi VM2C. Kỳ thi này giúp mình có cảm giác như đang nhập vai thành một nhà khoa học thực thụ, phải tự tìm kiếm và nghiên cứu mọi thứ chứ không có sẵn công cụ nào cho mình.
+Kỳ thi này giúp mình có cảm giác như đang nhập vai thành một nhà khoa học thực thụ, phải tự tìm kiếm và nghiên cứu mọi thứ chứ không có sẵn công cụ nào cho mình.
 
 Bên cạnh đó, do là toán mô hình nên không có một lời giải cụ thể nào, điều này cho phép chúng ta thỏa sức sáng tạo lời giải và tối ưu chúng.
 
@@ -111,7 +111,7 @@ Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $R = \\{ r_{lj} \\}$ là ma trận chứa các biến $r_{lj}$ với ý nghĩa lượng nhân lực tối thiểu cần cho ca làm việc $j$ của công xưởng $l$.
 ##  2.3. Các ràng buộc
-Ta sẽ xét ngày thứ $k$ $\rightarrow$ công xưởng thứ $l$ $\rightarrow$ ca làm việc thứ $j$:
+Ta sẽ xét ngày thứ $k$ $\rightarrow$ ca làm việc thứ $j$ $\rightarrow$ dây chuyền thứ $l$:
 1. Các công nhân chỉ làm các ca có đúng kĩ năng của mình:
 
 $$
@@ -240,12 +240,12 @@ Từ các số liệu chúng ta vừa tính toán, ta thấy được mô hình 
 
 Tuy nhiên đó chưa phải là kết quả tốt nhất mà mô hình có thể đạt được. Từ đề bài "mỗi nhân sự được phép làm tối đa 24 ngày trong 4 tuần", điều đó có nghĩa mỗi nhân sự cũng có thể làm tối đa $22$ ngày và nó không vi phạm đề bài.
 
-Do đó ta có thể giảm số ngày tối đa từ $24 \rightarrow 22$, điều này giúp sự chênh lệch các ngày làm việc giữa các nhân sự giảm xuống rất nhiều. Sau khi áp dụng, bên dưới là đồ thị của kết quả:
+Do đó ta có thể giảm số ngày tối đa từ $24 \rightarrow 22$, điều này giúp sự chênh lệch các ca làm việc giữa các nhân sự giảm xuống rất nhiều. Sau khi áp dụng, bên dưới là đồ thị của kết quả:
 
 ![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/61aefb29-9057-4547-bca9-a52bff886933)
 ![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/9e94d4ae-967f-4b2d-9254-07d1574c471d)
 
-Độ lệch chuẩn lúc này là $1.49$ đối với các ngày làm việc và $1.70$ đối với các ca đêm làm việc, và $max - min = 5$ đối với các ngày làm việc và $max - min = 9$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện và tốt hơn rất nhiều.
+Độ lệch chuẩn lúc này là $1.49$ đối với các ca làm việc và $1.70$ đối với các ca đêm làm việc, và $max - min = 5$ đối với các ca làm việc và $max - min = 9$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện và tốt hơn rất nhiều.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 

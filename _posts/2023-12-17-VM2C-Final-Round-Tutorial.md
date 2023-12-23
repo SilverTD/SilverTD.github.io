@@ -2,7 +2,7 @@
 
 title: VM2C Final Round Tutorial
 thumbnail: https://github.com/SilverTD/SilverTD.github.io/assets/55396370/1379c360-d2f9-4e3f-8654-4a70c4624676
-description: Ở bài toán VM2C vòng 2, chúng ta sẽ phải đi giải quyết vấn đề về sắp xếp lịch cho các công nhân sao cho là công bằng và tối ưu nhất có thể...
+description: Ở bài toán VM2C vòng 2, chúng ta sẽ phải đi giải quyết vấn đề về sắp xếp lịch cho các nhân sự sao cho là công bằng và tối ưu nhất có thể...
 
 ---
 # 1. Giới thiệu
@@ -11,14 +11,14 @@ description: Ở bài toán VM2C vòng 2, chúng ta sẽ phải đi giải quy�
 
 Kỳ thi gồm 2 vòng. Ở mỗi vòng, thử thách của các đội là tìm ra giải pháp cho một vấn đề mở, thường thì không giống các bài tập về nhà hay dự án nhóm trên lớp học thông thường. Kỹ năng quản lý thời gian, làm việc nhóm, viết và trình bày báo cáo cũng quan trọng không kém khả năng tìm hiểu các kiến thức mới và tư duy ứng dụng vào thực tế.
 
-Kỳ thi VM2C là một sân chơi bổ ích và thú vị, giúp các học sinh phát triển các kỹ năng cần thiết cho thế kỷ 21. Đội của mình rất vinh dự khi là một trong những đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này.
+Kỳ thi VM2C là một sân chơi bổ ích và thú vị, giúp các học sinh phát triển các kỹ năng cần thiết trong thực tế. Đội của mình rất vinh dự khi là một trong những đội đoạt huy chương đồng trong kỳ thi được tổ chức lần đầu tiên này.
 
 ## 1.2. Cảm nhận về kỳ thi
 Kỳ thi này giúp mình có cảm giác như đang nhập vai thành một nhà khoa học thực thụ, phải tự tìm kiếm và nghiên cứu mọi thứ chứ không có sẵn công cụ nào cho mình.
 
 Bên cạnh đó, do là toán mô hình nên không có một lời giải cụ thể nào, điều này cho phép chúng ta thỏa sức sáng tạo lời giải và tối ưu chúng.
 
-Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết trong thực tế, chẳng hạn như kỹ năng giải quyết vấn đề, quản lý thời gian, làm việc nhóm và thuyết trình. Minh tin rằng những kỹ năng này sẽ giúp ích rất nhiều trong tương lai.
+Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết trong thực tế, chẳng hạn như kỹ năng giải quyết vấn đề, quản lý thời gian, làm việc nhóm và thuyết trình. Mình tin rằng những kỹ năng này sẽ giúp ích rất nhiều trong tương lai.
 
 # 2. Hướng giải quyết bài toán a vòng 2
 
@@ -27,9 +27,9 @@ Kỳ thi VM2C giúp mình cải thiện rất nhiều kỹ năng cần thiết t
 > Đề vòng 2: [Đề thi](https://vm2c.viasm.edu.vn/images/VM2C%20-%20De%20thi%20Vong%20II.pdf "Đề thi")
 
 ## 2.1. Xử lý file lenh_san_xuat_Day_chuyen_?.txt
-Đây là phần mà đã khiến mình không hoàn thành kịp phần thi của mình, mình đã quên mất file này cho đến khi vào ngày cuối cùng thì mình mới nhận ra là có sự tồn tại của file này. Về cơ bản là file cho bạn thời gian mở và đóng công xưởng (công xưởng không làm việc liên tục).
+Đây là phần đã khiến mình không hoàn thành kịp phần thi của mình, mình đã quên mất file này khi làm bài thi. Về cơ bản là file cho bạn thời gian đóng và mở dây chuyền (dây chuyền không làm việc liên tục).
 
-Đề bài cho biết trong một ngày có 3 ca:
+Đề bài cho ta biết trong một ngày có 3 ca:
 + Ca sáng: 6h - 14h.
 + Ca chiều: 14h - 22h.
 + Ca tối: 22h - 6h hôm sau.
@@ -42,7 +42,7 @@ Thoi_gian_bat_dau; Thoi_gian_ket_thuc
 2023-06-03 06:00:00; 2023-06-03 22:00:00
 ```
 
-Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi công xưởng mở). Như với file dữ liệu ở trên thì công xưởng mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Ta sẽ xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` như sau:
+Với hướng làm của mình thì mình phải xử lý file đấy, và kiểm tra xem các ca nào sẽ hoạt động (hoạt động khi dây chuyền mở). Như với file dữ liệu ở trên thì dây chuyền mở cửa vào lúc ``2023-06-01 08:00:00`` và đóng cửa vào lúc ``2023-06-02 04:00:00``, từ dữ liệu đó thì ta biết được vào ngày ``2023-06-01`` sẽ có 3 ca là ca sáng, chiều và tối. Ta sẽ xử lý file ``lenh_san_xuat_Day_chuyen_1.txt`` như sau:
 
 ```
 Ngày 1: có 3 ca sáng, chiều và tối 
@@ -99,68 +99,68 @@ File xử lý bằng tay để kiểm tra code hoạt động ổn: [processed_l
 ## 2.2. Các biến số
 Ta sẽ định nghĩa các biến số dùng trong tính toán như sau:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ilj} \\}$ là ma trận chứa các biến $x_{ilj}$ với ý nghĩa công nhân $i$ được chọn làm ca thứ $j$ của công xưởng $l$ hay không.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $X = \\{ x_{ijk} \\}$ là ma trận chứa các biến $x_{ijk}$ với ý nghĩa nhân sự $i$ được chọn làm ca thứ $j$ của dây chuyền $k$ hay không.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B = \\{b_{ilj} \\}$ là ma trận chứa các biến $b_{ilj}$ với ý nghĩa công nhân thứ $i$ có kĩ năng $j$ của công xưởng $l$ hay không.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B = \\{b_{ijk} \\}$ là ma trận chứa các biến $b_{ijk}$ với ý nghĩa nhân sự thứ $i$ có kĩ năng $j$ của dây chuyền $k$ hay không.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $D = \\{d_{i} \\}$ là ma trận chứa các biến $d_{i}$ với ý nghĩa tổng số ngày làm việc của công nhân $i$ cho đến hiện tại.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $D = \\{d_{i} \\}$ là ma trận chứa các biến $d_{i}$ với ý nghĩa tổng số ngày làm việc của nhân sự $i$ cho đến hiện tại.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $N = \\{n_{i} \\}$ là ma trận chứa các biến $n_{i}$ với ý nghĩa tổng số ca đêm làm việc của công nhân $i$ cho đến hiện tại.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $N = \\{n_{i} \\}$ là ma trận chứa các biến $n_{i}$ với ý nghĩa tổng số ca đêm làm việc của nhân sự $i$ cho đến hiện tại.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $W = \\{ w_{i} \\}$ là ma trận chứa các biến $w_{i}$ với ý nghĩa công nhân thứ $i$ có được làm ca hiện tại hay không.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $W = \\{ w_{i} \\}$ là ma trận chứa các biến $w_{i}$ với ý nghĩa nhân sự thứ $i$ có được làm ca hiện tại hay không.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $R = \\{ r_{lj} \\}$ là ma trận chứa các biến $r_{lj}$ với ý nghĩa lượng nhân lực tối thiểu cần cho ca làm việc $j$ của công xưởng $l$.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $R = \\{ r_{kj} \\}$ là ma trận chứa các biến $r_{kj}$ với ý nghĩa lượng nhân lực tối thiểu cần cho ca làm việc $j$ của dây chuyền $k$.
 ##  2.3. Các ràng buộc
-Ta sẽ xét ngày thứ $k$ $\rightarrow$ ca làm việc thứ $j$ $\rightarrow$ dây chuyền thứ $l$:
-1. Các công nhân chỉ làm các ca có đúng kĩ năng của mình:
+Ta sẽ xét ngày thứ $z$ $\rightarrow$ ca làm việc thứ $j$ $\rightarrow$ dây chuyền thứ $k$:
+1. Các nhân sự chỉ làm các ca có đúng kĩ năng của mình:
 
 $$
 \begin{aligned}
-x_{ilj} \leq b_{ilj} \ \ \ \forall i, l, j > 0
+x_{ijk} \leq b_{ijk} \ \ \ \forall i, j, k \geq 0
 \end{aligned} 
 $$
 
-2. Các công nhân chỉ làm một kĩ năng duy nhất trong một ca trong ngày:
+2. Các nhân sự chỉ làm một kĩ năng duy nhất trong một ca trong ngày:
 
 $$
 \begin{aligned}
-\sum\limits_{j}^{}x_{ilj} \leq 1 \ \ \ \forall i, l > 0
+\sum\limits_{j}^{}x_{ijk} \leq 1 \ \ \ \forall i, k \geq 0
+\end{aligned}
+$$
+
+3. Tổng nhân sự làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{kj}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các nhân sự chỉ làm một ca duy nhất trong ngày và các nhân sự làm ca đêm hôm trước sẽ không làm ca sáng hôm nay:
+
+$$
+\begin{aligned}
+\sum\limits_{i}^{} \ (x_{ijk} * w_{i}) \geq r_{kj} \ \ \ \forall j, k \geq 0
 \end{aligned} 
 $$
 
-3. Tổng công nhân làm việc trong ca thứ $j$ (có kỹ năng $j$) tối thiểu là $r_{lj}$, ta có thêm biến $w_{i}$ nhằm đảm bảo các công nhân chỉ làm một ca duy nhất trong ngày và các công nhân làm ca đêm hôm trước sẽ không làm ca sáng hôm nay:
+4. Tổng số ngày làm việc của nhân sự không vượt quá 24 ngày:
 
 $$
 \begin{aligned}
-\sum\limits_{i}^{}(x_{ilj} * w_{i}) \geq r_{lj} \ \ \ \forall l, j > 0
-\end{aligned} 
-$$
-
-4. Tổng số ngày làm việc của công nhân không vượt quá 24 ngày:
-
-$$
-\begin{aligned}
-\sum\limits_{i}^{}(x_{ilj} + d_{i}) \leq 24 \ \ \ \forall l, j > 0
+\sum\limits_{i}^{} \ (x_{ijk} + d_{i}) \leq 24 \ \ \ \forall j, k \geq 0
 \end{aligned} 
 $$
 
 ##  2.4. Hàm mục tiêu
-Mục tiêu mà chúng ta cần tối ưu đầu tiên là số lượng công nhân tham gia làm việc luôn phải là nhỏ nhất:
+Mục tiêu mà chúng ta cần tối ưu đầu tiên là số lượng nhân sự tham gia làm việc luôn phải là nhỏ nhất:
 
 $$
-F_{1} = \sum\limits_{i, \ j}x_{ilj}
+F_{1} = \sum\limits_{i, \ j}x_{ijk}
 $$
 
-Tiếp theo ta cần tối ưu độ công bằng giữa các công nhân, điều này có nghĩa độ chênh lệch số ca làm việc giữa các công nhân là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các công nhân có số ca làm việc ít nhất:
+Tiếp theo ta cần tối ưu độ công bằng giữa các nhân sự, điều này có nghĩa độ chênh lệch số ca làm việc giữa các nhân sự là nhỏ nhất có thể. Do ta đang xét từng ca trong từng ngày, nên mỗi lần xét ta sẽ luôn ưu tiên lựa chọn các nhân sự có số ca làm việc ít nhất:
 
 $$
-F_{2} = \sum\limits_{i, \ j}[x_{ilj} * d_{i} * C(i)]
+F_{2} = \sum\limits_{i, \ j} \ [x_{ijk} * d_{i} * C(i)]
 $$
 
-Tương tự với số ca đêm, ta cũng luôn lựa chọn các công nhân có số ca đêm làm việc ít nhất:
+Tương tự với số ca đêm, ta cũng luôn lựa chọn các nhân sự có số ca đêm làm việc ít nhất:
 
 $$
-F_{3} = \sum\limits_{i, \ j}[x_{ilj} * n_{i} * C(i)]
+F_{3} = \sum\limits_{i, \ j} \ [x_{ijk} * n_{i} * C(i)]
 $$
 
 Với $C(i)$ ta định nghĩa như sau:
@@ -169,13 +169,13 @@ $$
 \begin{equation*}
 C(i) = 
 \begin{cases}
-      C & \text{nếu công nhân i có nhiều hơn 1 kĩ năng} \\
+      C & \text{nếu nhân sự i có nhiều hơn 1 kĩ năng} \\
       1 & \text{ngược lại}
 \end{cases}
 \end{equation*}
 $$
 
-Điều đó có nghĩa, ta sẽ ưu tiên lựa chọn các công nhân có nhiều hơn một kĩ năng, như thế sẽ tránh trường hợp thiếu công nhân của các xưởng khác.
+Điều đó có nghĩa, ta sẽ ưu tiên lựa chọn các nhân sự có nhiều hơn một kĩ năng, như thế sẽ tránh trường hợp thiếu nhân sự của các xưởng khác.
 
 Hàm mục tiêu của chúng ta lúc này sẽ là tổng các hàm cần tối ưu ở trên $F_1, F_2, F_3$:
 
@@ -194,6 +194,8 @@ A =
 \end{cases}
 \end{equation*}
 $$
+
+Hàm mục tiêu $OP$ càng nhỏ khi nhân sự được chọn có số ngày làm việc hoặc số ca đêm làm việc càng nhỏ.
 
 ## 2.5. Áp dụng mô hình
 ### 2.5.1 Dữ liệu 1
@@ -245,7 +247,7 @@ Do đó ta có thể giảm số ngày tối đa từ $24 \rightarrow 22$, đi�
 ![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/61aefb29-9057-4547-bca9-a52bff886933)
 ![image](https://github.com/SilverTD/SilverTD.github.io/assets/55396370/01d680af-eb01-49f8-8468-0d90b5764433)
 
-Độ lệch chuẩn lúc này là $1.49$ đối với các ca làm việc và $1.70$ đối với các ca đêm làm việc, và $max - min = 5$ đối với các ca làm việc và $max - min = 8$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện và tốt hơn rất nhiều.
+Độ lệch chuẩn lúc này là $1.49$ đối với các ca làm việc và $1.70$ đối với các ca đêm làm việc, $max - min = 5$ đối với các ca làm việc và $max - min = 8$ đối với các ca đêm làm việc. Ta thấy kết quả đã cải thiện và tốt hơn rõ rệt.
 
 Toàn bộ source code của mình: [VM2C_Final](https://github.com/SilverTD/Stuffs/tree/main/VM2C_Final "VM2C Final")
 
@@ -255,24 +257,32 @@ Mọi ý tưởng và hướng đi mình vừa trình bày ở bên trên, đề
 ### 2.6.1. Ưu điểm
 Đây vốn dĩ là một mô hình khá đơn sơ, đơn giản nên rất dễ hiểu, bên cạnh đó những thứ chúng ta làm không thực sự quá nặng toán. Cơ bản là chỉ làm theo những gì đề cho.
 
+Code khi được triển khai cũng không quá dài, thời gian chạy cũng khá ngắn $7.46$ (s) đối với bộ dữ liệu (1) và $43.76$ (s) đối với bộ dữ liệu (2).
+
 Kết quả mà chúng ta vừa tìm được trông khá ổn.
 
 ### 2.6.2. Nhược điểm
-Chắc chắn là do mô hình còn quá đơn giản nên không thực sự quá tối ưu, đồng thời ta đã bỏ qua nhiều vấn đề thực tế khác.
+Mô hình còn đơn giản, do đó chưa tối ưu. Đồng thời mô hình đã bỏ qua những vấn đề thực tế khác.
+
+Tuy nhìn mô hình trên đơn giản, nhưng việc triển khai nó bằng code thì hơi khó khăn. Đặc biệt là biến $w_i$, ta phải xét các trường hợp tổng quát để biến $w_i$ luôn cho ra các kết quả đúng và chính xác.
 
 ### 2.6.3. Cải thiện
 Mô hình có thể cải thiện kết quả lên rất nhiều nếu ta giảm số ngày tối đa làm việc xuống (điều này không vi phạm đề bài).
 
-Mô hình chúng ta đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các công nhân có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như các đội khác thì chọn tối ưu độ lệch chuẩn ($max - min$).
+Mô hình của chúng ta là đang xét từng ca, do đó mỗi lần xét ta sẽ ưu tiên lựa chọn các nhân sự có số ca làm ít. Chúng ta hoàn toàn có thể thử thay đổi hàm mục tiêu, như đội đến từ trường <b>chuyên Lê Hồng Phong</b> thì chọn tối ưu độ lệch chuẩn ($max - min$).
 
-Hoặc như đội <b>HSGS</b> đã cho vào "Độ bất mãn" để tối ưu kết quả, đây hoàn toàn là một ý tưởng khá hay và sáng tạo. Chúng ta có thể học hỏi theo cách làm đấy.
+Hoặc như đội đến từ trường <b>chuyên Khoa Học Tự Nhiên</b> đã cho thêm vào "Độ bất mãn" để tối ưu kết quả, đây hoàn toàn là một ý tưởng khá hay và sáng tạo. Chúng ta có thể học hỏi theo cách làm ấy.
+
+Hay như đội đến từ trường <b>chuyên Lương Văn Chánh</b> thì dùng thuật toán tham lam để giải quyết bài toán này.
 
 **Lưu ý:** Trong quá trình làm việc, sau khi mô hình đã cho ra kết quả thì ta cần phải tạo một <b>Checker</b> để kiểm tra lại kết quả, xem kết quả đã thỏa mãn các ràng buộc hay chưa ? Vì cho dù kết quả có tối ưu, độ lệch chuẩn chỉ $0.1$ nhưng vi phạm điều kiện thì mọi thứ đều vô nghĩa.
 
 # 3. Tổng kết
-Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đăng giải quyết câu a. Nhưng nếu bạn đã đọc bài viết của mình, các bạn sẽ nắm được những gì bài toán yêu cầu và hướng đi, từ đó hình thành tư duy để giải quyết nốt các phần còn lại của bài toán. Do đây là toán mô hình, nên không có một lời giải cụ thể duy nhất, các bạn có thể tự sáng tạo nhiều lời giải khác nhau. Từ đó so sánh các kết quả và lựa chọn lời giải tốt nhất. Nghe cứ như một nhà khoa học thực thụ nhỉ ? 
+Do không có nhiều thời gian, nên tạm thời mình chỉ viết bài đăng giải quyết câu a. Nhưng nếu bạn đã đọc bài viết của mình, các bạn sẽ nắm được những gì bài toán yêu cầu và hướng đi, từ đó hình thành tư duy để giải quyết nốt các vấn đề còn lại của bài toán.
 
-Đây vốn dĩ là một cuộc thi khá hay phải không ? Nó hoàn toàn giúp chúng ta rèn luyện được khá nhiều kĩ năng có ích trong thực tế, và đây hoàn toàn là một cuộc thi xứng đáng để chúng ta trải nghiệm một lần.
+Như ta thấy, mỗi đội đều có một cách riêng để giải quyết bài toán này. Đó chính là cái hay của toán mô hình, "không có một lời giải cụ thể duy nhất", vì vậy các bạn có thể tự tạo ra nhiều mô hình khác nhau và từ đó so sánh kết quả của chúng để chọn ra mô hình tốt nhất.
+
+Đây vốn dĩ là một cuộc thi khá hay phải không ? Nó hoàn toàn giúp chúng ta rèn luyện được khá nhiều kĩ năng có ích trong thực tế, và đây hoàn toàn là một cuộc thi xứng đáng để chúng ta trải nghiệm ít nhất một lần.
 
 # 4. Một số hình ảnh
 ![prize](https://github.com/SilverTD/Stuffs/assets/55396370/e74d2ecb-465e-4467-b1b2-1a8f859407aa)

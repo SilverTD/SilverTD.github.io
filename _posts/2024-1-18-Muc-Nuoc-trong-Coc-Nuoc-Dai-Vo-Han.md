@@ -136,13 +136,13 @@ Từ các công thức trên, ta thấy rằng khi góc $\theta \rightarrow 0$ t
 Ta dễ thấy $y_2$ ban đầu giảm rất chậm, sau đấy thì lại giảm càng nhanh và dốc hơn rất nhiều. Tác giả dự đoán rằng đây là một hàm lũy thừa:
 
 $$
-f(x) \approx a \times x^b
+f(x) = a \times x^b
 $$
 
 Thật vậy, từ việc dùng <b>Nonlinear Regression</b>, ta có được đồ thị của mực nước lúc đấy như sau:
 
 $$
-h(x) \approx 2.41978 \times x^{0.328745}
+h(\theta) \approx 2.41978 \times \theta^{0.328745}
 $$
 
 Bên dưới là đồ thị kết hợp cả 2 trường hợp, và chắc chắn đây là một hàm liên tục.

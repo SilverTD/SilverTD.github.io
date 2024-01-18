@@ -67,7 +67,7 @@ $$
 ## 2.3. Mô hình phức tạp
 Tuy mô hình trên khá đơn giản, nhưng trên thực tế các cốc nước đều có dạng là hình trụ, do đó vấn đề sẽ phức tạp hơn rất nhiều. Tương tự, ta chia ra 2 trường hợp là $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
 
-![](https://silvertd.github.io/assets/img/Water-1.png)
+![](https://silvertd.github.io/assets/img/Water-6.png)
 
 Ở trường hợp $\theta \geq \theta_0$ đơn giản chỉ cần tính thể tích của hình phiến trụ. Từ đó ta cũng sẽ tìm được công thức tương tự như mô hình đầu tiên:
 
@@ -77,7 +77,7 @@ $$
 
 Riêng trường hợp $\theta \leq \theta_0$ lại phức tạp hơn rất nhiều. Lúc này sẽ cần đến vi tích phân để tính phần thể tích nước.
 
-![](https://silvertd.github.io/assets/img/Water-2.png)
+![](https://silvertd.github.io/assets/img/Water-7.png)
 
 Chọn trục tọa độ như hình vẽ với tâm $O$ là tâm của hình tròn bán kính $R$. Đầu tiên ta chia nhỏ thể tích nước thành các hình chữ nhật như sau:
 

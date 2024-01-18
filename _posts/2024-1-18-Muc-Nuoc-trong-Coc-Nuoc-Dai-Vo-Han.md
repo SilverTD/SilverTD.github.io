@@ -6,18 +6,18 @@ description: Ở bài viết này, ta sẽ nghiên cứu một vấn đề vật
 
 ---
 
-# Giả thuyết
+# 1. Giả thuyết
 - Giả sử cốc có chiều dài vô hạn và không có khối lượng.
 - Cốc nước là một hình trụ bán kính $R$.
 - Góc $\theta$ là góc hợp bởi cốc với mặt phẳng ngang, $\theta$ càng nhỏ thì cốc nghiêng càng nhiều.
 - Mực nước ban đầu là $L$
 - Sử dụng đơn vị radian thay vì là độ.
 
-# Giải quyết bài toán mực nước trong cốc nước
-## Phát biểu bài toán
+# 2. Giải quyết bài toán mực nước trong cốc nước
+## 2.1. Phát biểu bài toán
 Cho rằng cốc nước ban đầu ở góc $\theta = \pi/2$ và mực nước lúc đó là $L$, khi cốc nước càng nghiêng dần thì mực nước trong cốc nước sẽ di chuyển có quy luật như nào ? Đi tìm quy luật đó (đồ thị, thực nghiệm).
 
-## Mô hình đơn giản
+## 2.2. Mô hình đơn giản
 Ở mô hình đơn giản này, ta sẽ giả sử cốc nước là một hình hộp chữ nhật. Ta sẽ chia ra 2 trường hợp: $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
 
 Thế $\theta_0$ ở đây là gì ? $\theta_0$ ở đây là góc hợp giữa cốc và mặt phẳng ngang mà khi đó là sự chuyển đổi hình dạng của nước từ "hình thang" sang "hình tam giác" (khi nhìn cốc nước theo hướng 2 bên).
@@ -64,7 +64,7 @@ h(\theta) =
 \end{equation*}
 $$
 
-## Mô hình phức tạp
+## 2.3. Mô hình phức tạp
 Tuy mô hình trên khá đơn giản, nhưng trên thực tế các cốc nước đều có dạng là hình trụ, do đó vấn đề sẽ phức tạp hơn rất nhiều. Tương tự, ta chia ra 2 trường hợp là $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
 
 ![](https://silvertd.github.io/assets/img/Water-1.png)
@@ -124,7 +124,7 @@ $$
 
 Giải phương trình trên và ta sẽ tìm được $h(\theta)$.
 
-## Biện luận và thử nghiệm
+## 2.4. Biện luận và thử nghiệm
 Từ các công thức trên, ta thấy rằng khi góc $\theta \rightarrow 0$ thì $H \rightarrow \infty$ và $J \rightarrow 0$
 
 Để dễ hình dung mực nước di chuyển như nào, ta cần vẽ đồ thị $h(\theta)$.
@@ -151,7 +151,7 @@ Bên dưới là đồ thị kết hợp cả 2 trường hợp, và chắc ch�
 
 Phần màu đỏ là trường hợp $\theta \geq \theta_0$ (hình phiến trụ) và phần màu xanh là trường hợp $\theta \leq \theta_0$ (hình trụ nêm). Ta thấy rằng đồ thị trông khá hợp lí và rất đẹp (khá gần với các giá trị tính toán từ bảng số liệu trên).
 
-# Kết luận
+# 3. Kết luận
 Việc dự đoán mực nước trong cốc nước dài vô hạn cứ ngỡ đơn giản, tuy nhiên việc tính toán lại rất phức tạp. Đặc biệt là tính toán thể tích của hình trụ nêm.
 
 Tuy nhiên đây hoàn toàn là một nghiên cứu vấn đề thực tế rất hay, giúp học hỏi được các kĩ năng cần thiết trong việc nghiên cứu khoa học.

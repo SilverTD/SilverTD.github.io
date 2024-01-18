@@ -156,4 +156,4 @@ Việc dự đoán mực nước trong cốc nước dài vô hạn cứ ngỡ �
 
 Tuy nhiên đây hoàn toàn là một nghiên cứu vấn đề thực tế rất hay, giúp học hỏi được các kĩ năng cần thiết trong việc nghiên cứu khoa học.
 
-Đây chưa phải là vấn đề duy nhất mà cốc nước mang lại, ở bài viết sau ta sẽ giải quyết bài toán "Cần uống bao nhiêu % thể tích nước để cốc Cola hoặc cốc nước cân bằng khi nghiêng một góc $\theta$".
+Đây chưa phải là vấn đề duy nhất mà cốc nước mang lại, ở bài viết sau ta sẽ giải quyết bài toán "Cần uống bao nhiêu % thể tích nước trong lon Coca Cola để lon cân bằng khi nghiêng một góc $\theta$".

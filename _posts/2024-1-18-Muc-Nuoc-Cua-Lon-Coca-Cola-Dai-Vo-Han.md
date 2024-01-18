@@ -104,7 +104,7 @@ $$
 \begin{aligned}
     V(\theta) & = \int_{R - J}^{R} A(x) dx \\
     &= 2\int_{R - J}^{R} \frac{H(x - R + J)}{J} \times \sqrt{R^2 - x^2} \ dx \\
-    &= \frac{H\times R^2}{3}(\frac{3sin(\psi) - 3 \psi cos(\psi) - sin^3\psi}{1 - cos(\psi)})
+    &= \frac{H\times R^2}{3}(\frac{3sin(\psi) - 3 \psi cos(\psi) - sin^3(\psi)}{1 - cos(\psi)})
 \end{aligned}
 \end{equation*}
 $$

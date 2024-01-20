@@ -2,18 +2,18 @@
 
 title: Mực nước trong chiếc cốc cao vô hạn
 thumbnail: https://silvertd.github.io/assets/img/Water-1.png
-description: Ở bài viết này, ta sẽ nghiên cứu một vấn đề vật lý trong thực tế. Đó là mực nước trong một cốc nước sẽ thay đổi như nào khi thay đổi góc nghiêng giữa cốc và mặt phẳng ngang,...
+description: Ở bài viết này, ta sẽ nghiên cứu một vấn đề vật lý trong thực tế. Đó là mực nước trong một chiếc cốc cao vô hạn sẽ thay đổi phụ thuộc vào góc nghiêng giữa cốc và mặt phẳng ngang như thế nào.
 
 ---
 
 # 1. Phát biểu vấn đề nghiên cứu
-Giả sử ta có một chiếc cốc cao vô hạn, có nước bên trong cốc và độ cao mực nước ban đầu là $L$. Bây giờ ta nghiêng chiếc cốc với một góc $0 \leq \theta \leq \pi/2$ bất kì, thì mực nước trong cốc lúc bấy giờ sẽ thay đổi như nào ? Hãy đi tìm hàm $h(\theta)$ đó.
+Giả sử ta có một chiếc cốc bán kính $R$ cao vô hạn, có nước bên trong cốc và độ cao mực nước ban đầu là $L$. Bây giờ ta nghiêng chiếc cốc một góc $0 \leq \theta \leq \pi/2$ bất kì, thì mực nước trong cốc lúc bấy giờ sẽ thay đổi như nào ? Hãy đi tìm hàm $h(\theta)$ đó.
 
-# 2. Giải quyết bài toán mực nước trong cốc nước
+# 2. Giải quyết vấn đề
 ## 2.1. Mô hình đơn giản
-Để đơn giản hơn trong việc tính toán, ở mô hình đơn giản này ta sẽ giả sử chiếc cốc là một hình hộp chữ nhật. Ta sẽ chia ra 2 trường hợp: $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
+Để đơn giản hóa trong việc tính toán, ở mô hình đơn giản này ta sẽ giả sử chiếc cốc là một hình hộp chữ nhật. Ta sẽ chia ra 2 trường hợp: $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
 
-Thế $\theta_0$ ở đây là gì ? $\theta_0$ ở đây là góc hợp giữa cốc và mặt phẳng ngang mà khi đó là giao của sự chuyển đổi hình dạng của nước từ "hình thang" sang "hình tam giác" (khi nhìn cốc nước theo hướng 2 bên).
+Thế $\theta_0$ ở đây là gì ? $\theta_0$ ở đây là góc hợp giữa cốc và mặt phẳng ngang mà khi đó là giao của sự chuyển đổi hình dạng của nước từ "hình thang" sang "hình tam giác" (khi nhìn cốc nước theo hướng bên).
 
 Ta dễ dàng tìm được $\theta_0 = arctan(\frac{L}{R})$, ta sẽ đi giải quyết trường hợp đầu tiên $\theta \geq \theta_0$ (hình dạng của nước lúc này là hình thang hoặc là tam giác nếu $\theta = \theta_0$).
 
@@ -64,7 +64,7 @@ Tuy mô hình trên khá đơn giản, nhưng trên thực tế các cốc nư�
 
 ![](https://silvertd.github.io/assets/img/Water-6.png)
 
-Ở trường hợp $\theta \geq \theta_0$ đơn giản chỉ cần tính thể tích của hình phiến trụ. Ta đã biết rằng thể tích hình phiến trụ là:
+Ở trường hợp $\theta \geq \theta_0$ đơn giản ta chỉ cần tính thể tích của hình phiến trụ. Ta đã biết rằng, thể tích hình phiến trụ là:
 
 $$
 V(\theta) = \frac{\pi R^2 (h_{min} + h_{max})}{2}

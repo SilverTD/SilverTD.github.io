@@ -173,7 +173,7 @@ Bên dưới là đồ thị kết hợp cả 2 trường hợp:
 Phần màu đỏ là trường hợp $\theta \geq \theta_0$ (hình phiến trụ) và phần màu xanh là trường hợp $\theta \leq \theta_0$ (hình trụ nêm). Ta thấy rằng đồ thị trông khá hợp lí và rất đẹp (khá gần với các giá trị tính toán từ bảng số liệu trên). Để tăng độ chính xác, ta có thể tăng số lượng dữ liệu trong bảng số liệu. 
 
 # 3. Kết luận
-Việc dự đoán mực nước trong cốc nước dài vô hạn cứ ngỡ đơn giản, tuy nhiên việc tính toán lại rất phức tạp. Đặc biệt là tính toán thể tích của hình trụ nêm.
+Việc dự đoán mực nước trong chiếc cốc cao vô hạn cứ ngỡ đơn giản, tuy nhiên việc tính toán lại rất phức tạp. Đặc biệt là tính toán thể tích của hình trụ nêm.
 
 Tuy nhiên đây hoàn toàn là một nghiên cứu vấn đề thực tế rất hay, giúp học hỏi được các kĩ năng cần thiết trong việc nghiên cứu khoa học. Đồng thời vì đây là một vấn đề vật lý rất đơn giản, ta hoàn toàn có thể thực nghiệm và kiểm chứng kết quả với những gì mà ta vừa tính toán.
 

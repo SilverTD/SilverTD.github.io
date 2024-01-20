@@ -1,35 +1,28 @@
 ---
 
-title: Mực nước trong cốc nước dài vô hạn
+title: Mực nước trong chiếc cốc cao vô hạn
 thumbnail: https://silvertd.github.io/assets/img/Water-1.png
 description: Ở bài viết này, ta sẽ nghiên cứu một vấn đề vật lý trong thực tế. Đó là mực nước trong một cốc nước sẽ thay đổi như nào khi thay đổi góc nghiêng giữa cốc và mặt phẳng ngang,...
 
 ---
 
-# 1. Giả thuyết
-- Giả sử cốc có chiều dài vô hạn và không có khối lượng.
-- Cốc nước là một hình trụ bán kính $R$.
-- Góc $\theta$ là góc hợp bởi cốc với mặt phẳng ngang, $\theta$ càng nhỏ thì cốc nghiêng càng nhiều.
-- Mực nước ban đầu là $L$
-- Sử dụng đơn vị radian thay vì là độ.
+# 1. Phát biểu vấn đề nghiên cứu
+Giả sử ta có một chiếc cốc cao vô hạn, có nước bên trong cốc và độ cao mực nước ban đầu là $L$. Bây giờ ta nghiêng chiếc cốc với một góc $0 \leq \theta \leq \pi/2$ bất kì, thì mực nước trong cốc lúc bấy giờ sẽ thay đổi như nào ? Hãy đi tìm hàm $h(\theta)$ đó.
 
 # 2. Giải quyết bài toán mực nước trong cốc nước
-## 2.1. Phát biểu bài toán
-Cho rằng cốc nước ban đầu ở góc $\theta = \pi/2$ và mực nước lúc đó là $L$, khi cốc nước càng nghiêng dần thì mực nước trong cốc nước sẽ di chuyển có quy luật như nào ? Đi tìm quy luật đó (đồ thị, thực nghiệm).
+## 2.1. Mô hình đơn giản
+Để đơn giản hơn trong việc tính toán, ở mô hình đơn giản này ta sẽ giả sử chiếc cốc là một hình hộp chữ nhật. Ta sẽ chia ra 2 trường hợp: $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
 
-## 2.2. Mô hình đơn giản
-Ở mô hình đơn giản này, ta sẽ giả sử cốc nước là một hình hộp chữ nhật. Ta sẽ chia ra 2 trường hợp: $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
+Thế $\theta_0$ ở đây là gì ? $\theta_0$ ở đây là góc hợp giữa cốc và mặt phẳng ngang mà khi đó là giao của sự chuyển đổi hình dạng của nước từ "hình thang" sang "hình tam giác" (khi nhìn cốc nước theo hướng 2 bên).
 
-Thế $\theta_0$ ở đây là gì ? $\theta_0$ ở đây là góc hợp giữa cốc và mặt phẳng ngang mà khi đó là sự chuyển đổi hình dạng của nước từ "hình thang" sang "hình tam giác" (khi nhìn cốc nước theo hướng 2 bên).
-
-Ta dễ dàng tìm được $\theta_0 = arctan(\frac{L}{R})$, ta sẽ đi giải quyết trường hợp đầu tiên $\theta \geq \theta_0$ (hình dạng của nước lúc này là hình thang).
+Ta dễ dàng tìm được $\theta_0 = arctan(\frac{L}{R})$, ta sẽ đi giải quyết trường hợp đầu tiên $\theta \geq \theta_0$ (hình dạng của nước lúc này là hình thang hoặc là tam giác nếu $\theta = \theta_0$).
 
 ![](https://silvertd.github.io/assets/img/Water-1.png)
 
 Như hình vẽ, ta dễ dàng thấy phần diện tích ở phía trên đã di chuyển xuống phần diện tích ở dưới. Ta đơn giản tìm được độ cao mực nước lúc này là:
 
 $$
-h(\theta) = Rcos(\theta) + Lsin(\theta)
+h(\theta) = Lsin(\theta) + Rcos(\theta)
 $$
 
 Tiếp đến là trường hợp $\theta \leq \theta_0$, hình dạng của nước lúc này là hình tam giác:
@@ -64,18 +57,46 @@ h(\theta) =
 \end{equation*}
 $$
 
-## 2.3. Mô hình phức tạp
+Việc cần giải quyết vấn đề ở mô hình đơn giản này nhằm đơn giản hóa tính toán và hiểu được hướng giải quyết của vấn đề. Từ đó giải quyết mô hình phức tạp dễ dàng hơn.
+
+## 2.2. Mô hình phức tạp
 Tuy mô hình trên khá đơn giản, nhưng trên thực tế các cốc nước đều có dạng là hình trụ, do đó vấn đề sẽ phức tạp hơn rất nhiều. Tương tự, ta chia ra 2 trường hợp là $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
 
 ![](https://silvertd.github.io/assets/img/Water-6.png)
 
-Ở trường hợp $\theta \geq \theta_0$ đơn giản chỉ cần tính thể tích của hình phiến trụ. Từ đó ta cũng sẽ tìm được công thức tương tự như mô hình đầu tiên:
+Ở trường hợp $\theta \geq \theta_0$ đơn giản chỉ cần tính thể tích của hình phiến trụ. Ta đã biết rằng thể tích hình phiến trụ là:
 
 $$
-h(\theta) = Rcos(\theta) + Lsin(\theta)
+V(\theta) = \frac{\pi R^2 (h_{min} + h_{max})}{2}
 $$
 
-Riêng trường hợp $\theta \leq \theta_0$ lại phức tạp hơn rất nhiều. Lúc này sẽ cần đến vi tích phân để tính phần thể tích nước.
+Từ hình vẽ, ta tìm được:
+
+$$
+\begin{equation*}
+\begin{aligned}
+& h_{max} = \frac{h(\theta)}{sin(\theta)} \\
+& h_{min} = h_{max} - \frac{2R}{tan(\theta)}
+\end{aligned}
+\end{equation*}
+$$
+
+Do thể tích nước là bảo toàn nên ta có:
+
+$$
+\begin{equation*}
+\begin{aligned}
+& V(\theta) = V_0 \leftrightarrow \frac{\pi R^2 (2h_{max} - 2R/tan(\theta))}{2} = L \pi R^2 \\
+& \leftrightarrow L = h_{max} - \frac{R}{tan(\theta)} \\
+& \leftrightarrow \frac{h(\theta)}{sin(\theta)} = L + \frac{Rcos(\theta)}{sin(\theta)} \\
+& \leftrightarrow h(\theta) = Lsin(\theta) + Rcos(\theta)
+\end{aligned}
+\end{equation*}
+$$
+
+Và chúng ta tìm được hàm $h(\theta)$ hoàn toàn giống như ở mô hình đầu tiên.
+
+Riêng trường hợp $\theta \leq \theta_0$ thì lại phức tạp hơn rất nhiều. Lúc này ta sẽ cần dùng đến vi tích phân để tính thể tích nước trông cốc.
 
 ![](https://silvertd.github.io/assets/img/Water-7.png)
 
@@ -124,7 +145,7 @@ $$
 
 Giải phương trình trên và ta sẽ tìm được $h(\theta)$.
 
-## 2.4. Biện luận và thử nghiệm
+## 2.3. Biện luận và thử nghiệm
 Từ các công thức trên, ta thấy rằng khi góc $\theta \rightarrow 0$ thì $H \rightarrow \infty$ và $J \rightarrow 0$
 
 Để dễ hình dung mực nước di chuyển như nào, ta cần vẽ đồ thị $h(\theta)$.
@@ -145,15 +166,17 @@ $$
 h(\theta) \approx 2.41978 \times \theta^{0.328745}
 $$
 
-Bên dưới là đồ thị kết hợp cả 2 trường hợp, và chắc chắn đây là một hàm liên tục.
+Bên dưới là đồ thị kết hợp cả 2 trường hợp:
 
 ![](https://silvertd.github.io/assets/img/Water-4.png)
 
-Phần màu đỏ là trường hợp $\theta \geq \theta_0$ (hình phiến trụ) và phần màu xanh là trường hợp $\theta \leq \theta_0$ (hình trụ nêm). Ta thấy rằng đồ thị trông khá hợp lí và rất đẹp (khá gần với các giá trị tính toán từ bảng số liệu trên).
+Phần màu đỏ là trường hợp $\theta \geq \theta_0$ (hình phiến trụ) và phần màu xanh là trường hợp $\theta \leq \theta_0$ (hình trụ nêm). Ta thấy rằng đồ thị trông khá hợp lí và rất đẹp (khá gần với các giá trị tính toán từ bảng số liệu trên). Để tăng độ chính xác, ta có thể tăng số lượng dữ liệu trong bảng số liệu. 
 
 # 3. Kết luận
 Việc dự đoán mực nước trong cốc nước dài vô hạn cứ ngỡ đơn giản, tuy nhiên việc tính toán lại rất phức tạp. Đặc biệt là tính toán thể tích của hình trụ nêm.
 
-Tuy nhiên đây hoàn toàn là một nghiên cứu vấn đề thực tế rất hay, giúp học hỏi được các kĩ năng cần thiết trong việc nghiên cứu khoa học.
+Tuy nhiên đây hoàn toàn là một nghiên cứu vấn đề thực tế rất hay, giúp học hỏi được các kĩ năng cần thiết trong việc nghiên cứu khoa học. Đồng thời vì đây là một vấn đề vật lý rất đơn giản, ta hoàn toàn có thể thực nghiệm và kiểm chứng kết quả với những gì mà ta vừa tính toán.
 
-Đây chưa phải là vấn đề duy nhất mà cốc nước mang lại, ở bài viết sau ta sẽ giải quyết bài toán "Cần uống bao nhiêu % thể tích nước trong lon Coca Cola để lon cân bằng khi nghiêng một góc $\theta$".
+# 4. Phụ lục
+- Code Tikz dùng để vẽ các hình ảnh minh họa: [Overleaf](https://www.overleaf.com/read/zbkmhxwnnzkz#56e3b5)
+- Đồ thị của hàm $h(\theta)$: [Desmos](https://www.desmos.com/calculator/wi2givlwd3)

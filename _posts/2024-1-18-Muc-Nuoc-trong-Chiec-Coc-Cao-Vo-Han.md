@@ -96,7 +96,7 @@ $$
 
 Và chúng ta tìm được hàm $h(\theta)$ hoàn toàn giống như ở mô hình đầu tiên.
 
-Riêng trường hợp $\theta \leq \theta_0$ thì lại phức tạp hơn rất nhiều. Lúc này ta sẽ cần dùng đến vi tích phân để tính thể tích nước trông cốc.
+Riêng trường hợp $\theta \leq \theta_0$ thì lại phức tạp hơn rất nhiều. Lúc này ta sẽ cần dùng đến vi tích phân để tính thể tích nước trong cốc.
 
 ![](https://silvertd.github.io/assets/img/Water-7.png)
 

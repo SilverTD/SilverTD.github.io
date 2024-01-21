@@ -17,7 +17,9 @@ Thế $\theta_0$ ở đây là gì ? $\theta_0$ ở đây là góc hợp giữa 
 
 Ta dễ dàng tìm được $\theta_0 = arctan(\frac{L}{R})$, ta sẽ đi giải quyết trường hợp đầu tiên $\theta \geq \theta_0$ (hình dạng của nước lúc này là hình thang hoặc là tam giác nếu $\theta = \theta_0$).
 
-![](https://silvertd.github.io/assets/img/Water-1.png)
+<p align="center" width="100%">
+    <img src="https://silvertd.github.io/assets/img/Water-1.png">
+</p>
 
 Như hình vẽ, ta dễ dàng thấy phần diện tích ở phía trên đã di chuyển xuống phần diện tích ở dưới. Ta đơn giản tìm được độ cao mực nước lúc này là:
 
@@ -27,7 +29,9 @@ $$
 
 Tiếp đến là trường hợp $\theta \leq \theta_0$, hình dạng của nước lúc này là hình tam giác:
 
-![](https://silvertd.github.io/assets/img/Water-2.png)
+<p align="center" width="100%">
+    <img src="https://silvertd.github.io/assets/img/Water-2.png">
+</p>
 
 Lúc này ta sẽ giải quyết vấn đề khác với trường hợp đầu. Ta thấy rằng cho dù cốc nước nghiêng với một góc như thế đi nữa thì thể tích của nước là không đổi. Ta có điều kiện $V_0 = V$ hay $A_0 = A$ với $A$ là diện tích của nước (vì độ dày là bằng nhau).
 
@@ -62,7 +66,9 @@ Việc cần giải quyết vấn đề ở mô hình đơn giản này nhằm �
 ## 2.2. Mô hình phức tạp
 Tuy mô hình trên khá đơn giản, nhưng trên thực tế các cốc nước đều có dạng là hình trụ, do đó vấn đề sẽ phức tạp hơn rất nhiều. Tương tự, ta chia ra 2 trường hợp là $\theta \geq \theta_0$ và $\theta \leq \theta_0$.
 
-![](https://silvertd.github.io/assets/img/Water-6.png)
+<p align="center" width="100%">
+    <img src="https://silvertd.github.io/assets/img/Water-6.png">
+</p>
 
 Ở trường hợp $\theta \geq \theta_0$ đơn giản ta chỉ cần tính thể tích của hình phiến trụ. Ta đã biết rằng, thể tích hình phiến trụ là:
 
@@ -86,7 +92,8 @@ Do thể tích nước là bảo toàn nên ta có:
 $$
 \begin{equation*}
 \begin{aligned}
-& V(\theta) = V_0 \leftrightarrow \frac{\pi R^2 (2h_{max} - 2R/tan(\theta))}{2} = L \pi R^2 \\
+& V(\theta) = V_0 \\
+& \leftrightarrow \frac{\pi R^2 (2h_{max} - 2R/tan(\theta))}{2} = L \pi R^2 \\
 & \leftrightarrow L = h_{max} - \frac{R}{tan(\theta)} \\
 & \leftrightarrow \frac{h(\theta)}{sin(\theta)} = L + \frac{Rcos(\theta)}{sin(\theta)} \\
 & \leftrightarrow h(\theta) = Lsin(\theta) + Rcos(\theta)
@@ -98,18 +105,24 @@ Và chúng ta tìm được hàm $h(\theta)$ hoàn toàn giống như ở mô h�
 
 Riêng trường hợp $\theta \leq \theta_0$ thì lại phức tạp hơn rất nhiều. Lúc này ta sẽ cần dùng đến vi tích phân để tính thể tích nước trong cốc.
 
-![](https://silvertd.github.io/assets/img/Water-7.png)
+<p align="center" width="100%">
+    <img src="https://silvertd.github.io/assets/img/Water-7.png">
+</p>
 
 Chọn trục tọa độ như hình vẽ với tâm $O$ là tâm của hình tròn bán kính $R$. Đầu tiên ta chia nhỏ thể tích nước thành các hình chữ nhật như sau:
 
-![](https://silvertd.github.io/assets/img/Water-3.png)
+<p align="center" width="100%">
+    <img src="https://silvertd.github.io/assets/img/Water-3.png">
+</p>
 
 Gọi $J, H$ lần lượt độ dài của phần nước ở đáy cốc và độ dài cạnh góc vuông lúc này, ta tính được các đại lượng sau:
 
 $$
-\displaylines{\phi = \pi/2 - \theta \\
-z(x) = \frac{H(x - R + J)}{J} \\
-y(x) = \sqrt{R^2 - x^2}}
+\begin{aligned}
+& \phi = \pi/2 - \theta \\
+& z(x) = \frac{H(x - R + J)}{J} \\
+& y(x) = \sqrt{R^2 - x^2}
+\end{aligned}
 $$
 
 Và diện tích phần hình chữ nhật lúc này là:
@@ -152,7 +165,9 @@ Từ các công thức trên, ta thấy rằng khi góc $\theta \rightarrow 0$ t
 
 Ở đây ta thử nghiệm với $L = R = 1.5$, Bên dưới là bảng dữ liệu mà tác giả đã tính toán được đối với trường hợp $\theta \leq \theta_0$:
 
-![](https://silvertd.github.io/assets/img/Water-5.png)
+<p align="center" width="100%">
+    <img src="https://silvertd.github.io/assets/img/Water-5.png">
+</p>
 
 Ta dễ thấy $y_2$ ban đầu giảm rất chậm, sau đấy thì lại giảm càng nhanh và dốc hơn rất nhiều. Tác giả dự đoán rằng đây là một hàm lũy thừa:
 
@@ -168,7 +183,9 @@ $$
 
 Bên dưới là đồ thị kết hợp cả 2 trường hợp:
 
-![](https://silvertd.github.io/assets/img/Water-4.png)
+<p align="center" width="100%">
+    <img src="https://silvertd.github.io/assets/img/Water-4.png">
+</p>
 
 Phần màu đỏ là trường hợp $\theta \geq \theta_0$ (hình phiến trụ) và phần màu xanh là trường hợp $\theta \leq \theta_0$ (hình trụ nêm). Ta thấy rằng đồ thị trông khá hợp lí và rất đẹp (khá gần với các giá trị tính toán từ bảng số liệu trên). Để tăng độ chính xác, ta có thể tăng số lượng dữ liệu trong bảng số liệu. 
 

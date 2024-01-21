@@ -44,9 +44,13 @@ $$
 Do thể tích nước là bảo toàn nên ta có (gọi bề dày là $a$):
 
 $$
-\displaylines{V(\theta) = V_0 \leftrightarrow aA(\theta) = aA_0 \\
-\leftrightarrow \frac{1}{2}\frac{h(\theta)}{sin(\theta)}\frac{h(\theta)}{cos(\theta)} = 2LR \\
-\leftrightarrow h(\theta) = \sqrt{4LRsin(\theta)cos(\theta)}}
+\begin{equation*}
+\begin{aligned}
+& V(\theta) = V_0 \leftrightarrow aA(\theta) = aA_0 \\
+& \leftrightarrow \frac{1}{2}\frac{h(\theta)}{sin(\theta)}\frac{h(\theta)}{cos(\theta)} = 2LR \\
+& \leftrightarrow h(\theta) = \sqrt{4LRsin(\theta)cos(\theta)}
+\end{aligned}
+\end{equation*}
 $$
 
 Tổng kết lại chúng ta có được hàm độ cao mực nước phụ thuộc vào góc $\theta$ như sau (đây là một hàm liên tục):

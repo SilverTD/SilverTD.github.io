@@ -12,14 +12,14 @@ description: Ở bài viết này, ta sẽ nghiên cứu các tính chất vật
 
 Theo tác giả, câu trả lời chính xác hơn là do sự chênh lệch áp suất phía trên và phía dưới cánh gây ra. Cánh quạt của trực thăng quay với tốc độ cao, tạo ra một dòng khí chuyển động tương đối với không khí. Theo nguyên lý <i>Bernoulli</i> dòng khí này tạo ra áp suất thấp ở mặt trên của cánh quạt và áp suất cao ở mặt dưới của cánh quạt. Sự chênh lệch áp suất này tạo ra lực nâng, giúp trực thăng bay lên.
 
-Do đó cánh trực thăng thường bị cong lên một tí, nhằm gia tăng lực nâng cho trực thăng. Từ đó khi trực thăng ở trên không thì lực nâng sẽ cân bằng với trọng lực.
+Do đó cánh trực thăng thường bị cong lên một tí, nhằm gia tăng lực nâng cho trực thăng. Từ đó, khi trực thăng đứng yên ở trên không thì lực nâng sẽ cân bằng với trọng lực.
 
 <p align="center" width="100%">
     <img height="350" src="https://silvertd.github.io/assets/img/Helicopter-0.png">
     <p style="text-align: center; color: gray">spinningwing.com/the-helicopter/momentum-theory</p>
 </p>
 
-Thế câu hỏi đặt ra là trực thăng sẽ tiêu thụ công suất nhiều hơn khi đứng yên ở trên không hay là khi di chuyển tịnh tiến về phía trước ? Hay nói mặt cách đơn giản hơn, hãy giải thích định tính hàm $P(v)$ với $P$ là công suất tiêu thụ và $v$ là vận tốc tịnh tiến. Bên dưới là đồ thị $P(v)$ khi được thực nghiệm trong thực tế:
+Thế câu hỏi đặt ra là trực thăng sẽ tiêu thụ công suất nhiều hơn khi đứng yên ở trên không hay là khi di chuyển tịnh tiến về phía trước ? Hay nói một cách đơn giản hơn, hãy giải thích định tính hàm $P(v)$ với $P$ là công suất tiêu thụ và $v$ là vận tốc tịnh tiến. Bên dưới là đồ thị $P(v)$ khi được thực nghiệm trong thực tế:
 
 <p align="center" width="100%">
     <img height="350" src="https://silvertd.github.io/assets/img/Helicopter-1.png">

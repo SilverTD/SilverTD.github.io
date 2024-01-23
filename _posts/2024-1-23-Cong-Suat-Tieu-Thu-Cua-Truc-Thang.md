@@ -107,7 +107,9 @@ Từ công thức ta dễ dàng đánh giá được công suất tỉ lệ vớ
 
 Khi trực thăng chuyển động, lúc này mọi chuyện sẽ khác và phức tạp hơn rất nhiều.
 
-Đầu tiên để trực thẳng di chuyển về phía trước, trực thẳng phải nghiêng một góc $\alpha$. Việc này gây ra một lực cản cảm ứng (induced drag) tỉ lệ với $1/v^2$, bên cạnh đó việc di chuyển với vận tốc không đổi cũng gây ra một lực cản của không khí (parasitic drag) tỉ lệ với $v^2$.
+Đầu tiên để trực thẳng di chuyển về phía trước, trực thẳng phải nghiêng một góc $\alpha$. Việc này gây ra một lực cản cảm ứng (induced drag) tỉ lệ với $1/v^2$. Lực cản cảm ứng (induced drag) thực chất không phải là một loại lực ma sát mà là một hệ quả của việc tạo ra lực nâng (thay đổi góc nghiêng $\alpha$), việc này giúp tăng lực nâng nhưng đồng thời cũng tạo ra một thành phần lực hướng ra phía sau gây cản trở chuyển động. Bạn có thể tìm hiểu thêm [Prandtl’s lifting line theory](https://en.wikipedia.org/wiki/Lifting-line_theory "Prandtl’s lifting line theory").
+
+Bên cạnh đó, việc di chuyển với vận tốc không đổi cũng gây ra một lực cản của không khí (parasitic drag) tỉ lệ với $v^2$.
 
 Lúc này, trực thăng sẽ có công suất tiêu thụ là tổng của công suất do lực cản cảm ứng và lực cản không khí gây ra.
 

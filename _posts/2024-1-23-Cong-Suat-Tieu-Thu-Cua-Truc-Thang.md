@@ -8,9 +8,9 @@ description: Ở bài viết này, ta sẽ nghiên cứu các tính chất vật
 
 # Giới thiệu vấn đề nghiên cứu
 
-Đã bao giờ bạn tự hỏi, trực thăng bay lên như nào hay chưa ? Trực thăng bay lên được là nhờ các cánh quạt quay, tạo ra một lực $F$ tác dụng vào không khí hướng xuống đồng thời theo định luật $III$ <i>Newton</i> không khí cũng tạo ra một phản lực $F$ tác dụng vào trực thăng hướng lên.
+Đã bao giờ bạn tự hỏi, trực thăng bay lên như nào hay chưa ? Trực thăng bay lên được là nhờ các cánh quạt quay, tạo ra một lực $F$ tác dụng vào không khí hướng xuống, đồng thời theo định luật $III$ <i>Newton</i> không khí cũng tạo ra một phản lực $F$ tác dụng vào trực thăng hướng lên.
 
-Theo tác giả, câu trả lời chính xác hơn là do sự chênh lệch áp suất phía trên và phía dưới cánh gây ra. Cánh quạt của trực thăng quay với tốc độ cao, tạo ra một dòng khí chuyển động tương đối với không khí. Theo nguyên lý <i>Bernoulli</i> dòng khí này tạo ra áp suất thấp ở mặt trên của cánh quạt và áp suất cao ở mặt dưới của cánh quạt. Sự chênh lệch áp suất này tạo ra lực nâng, giúp trực thăng bay lên.
+Hay giải thích theo cách khác là do sự chênh lệch áp suất phía trên và phía dưới cánh quạt gây ra. Cánh quạt của trực thăng quay với tốc độ cao, tạo ra một dòng khí chuyển động tương đối với không khí. Theo nguyên lý <i>Bernoulli</i> dòng khí này tạo ra áp suất thấp ở mặt trên của cánh quạt và áp suất cao ở mặt dưới của cánh quạt. Sự chênh lệch áp suất này tạo ra lực nâng, giúp trực thăng bay lên.
 
 Do đó cánh trực thăng thường bị cong lên một tí, nhằm gia tăng lực nâng cho trực thăng. Từ đó, khi trực thăng đứng yên ở trên không thì lực nâng sẽ cân bằng với trọng lực.
 

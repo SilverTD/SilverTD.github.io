@@ -83,8 +83,8 @@ $$
 \begin{equation*}
 \begin{aligned}
 & F_{thrust} = P \\
-\rightarrow \ & \frac{1}{2} Av^2{\rho_{air}}C_T = mg \\
-\rightarrow \ & v = \sqrt{\frac{2mg}{{\rho_{air}}C_TA}}
+\rightarrow \ & \frac{1}{2} Av^2 \rho_{air} C_T = mg \\
+\rightarrow \ & v = \sqrt{\frac{2mg}{\rho_{air} C_TA}}
 \end{aligned}
 \end{equation*}
 $$
@@ -95,8 +95,8 @@ $$
 \begin{equation*}
 \begin{aligned}
 P & = F_{thrust} \times v \\
-           & = mg \times \sqrt{\frac{2mg}{{\rho_{air}}C_TA}}
-           & = \sqrt{\frac{2(mg)^3}{{\rho_{air}}C_TA}}
+           & = mg \times \sqrt{\frac{2mg}{\rho_{air} C_TA}} \\
+           & = \sqrt{\frac{2(mg)^3}{\rho_{air} C_TA}}
 \end{aligned}
 \end{equation*}
 $$

@@ -75,7 +75,7 @@ $$
 
 Trong đó $\delta^3(\mathbf{r})$ là hàm <i>Dirac Delta</i>. Mật độ điện tích khối $\rho_p$ chỉ có tại vị trí điện tích điểm $q$. Vậy điện môi bị phân cực tại bề mặt tiếp xúc với điện tích $q$ và trái dấu với điện tích.
 
-Tổng điện tích lúc này bao gồm $Q = q + q_p = \dfrac{q}{\epsilon_r}$.
+Tổng điện tích lúc này bao gồm $Q = q + q_p = \frac{q}{\epsilon_r}$.
 
 <b>Lưu ý:</b> Tổng các điện tích phân cực lúc này khác 0, vì chỉ có các điện tích trái dấu tại bề mặt tiếp xúc. Thế còn các điện tích phân cực dương đã đi đâu ? Chúng ở rìa của môi trường điện môi, tuy nhiên trong trường hợp này môi trường điện môi là vô hạn do đó các điện tích phân cực dương lúc này nằm ở vô cùng (do đó ta bỏ qua sự ảnh hưởng của chúng).
 

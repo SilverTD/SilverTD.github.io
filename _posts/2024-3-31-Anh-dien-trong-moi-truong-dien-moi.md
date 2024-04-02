@@ -188,7 +188,7 @@ $$
 V_{M_1} = \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 | z - d|} + V_{\sigma}
 $$
 
-Trong đó $V_\sigma$ là điện thế do điện tích liên kết tại mặt phân cách $dq$ gây ra, ta có thể tính $dq = \sigma \cdot da$ trong đó để đơn giản ta dùng hệ tọa độ cực $(\rho, \phi)$ nên $da = \rho d\rho \cdot d \phi$. Từ đó ta tính được $dq = \sigma \cdot \rho d\rho \cdot d\phi$:
+Trong đó $V_\sigma$ là điện thế do điện tích liên kết tại mặt phân cách $dq$ gây ra, ta có thể tính $dq = \sigma \cdot da$ và để đơn giản ta dùng hệ tọa độ cực $(\rho, \phi)$ nên $da = \rho d\rho \cdot d \phi$. Từ đó ta tính được $dq = \sigma \cdot \rho d\rho \cdot d\phi$:
 
 $$
 \begin{equation*}
@@ -230,7 +230,11 @@ V_{\sigma} &= \frac{q_1}{4 \pi \epsilon_0 (d^2 - z^2)} \int^{d^2}_{z^2} \frac{du
 \end{align*}
 $$
 
-Trong đó ta đặt $q' = \epsilon_1q_1 = (\dfrac{\epsilon_1 - \epsilon_2}{\epsilon_1 + \epsilon_2})q$. Vậy điện thế do các điện tích liên kết tại mặt phân cách gây ra tương đương như điện thế do điện tích $q'$ đặt tại $(-d, 0)$ trong môi trường $\epsilon_1$ gây ra.
+Trong đó ta đặt $q' = \epsilon_1q_1 = (\dfrac{\epsilon_1 - \epsilon_2}{\epsilon_1 + \epsilon_2})q$. Vậy điện thế do các điện tích liên kết tại mặt phân cách gây ra tương đương như điện thế do điện tích $q'$ đặt tại $(-d, 0)$ trong môi trường $\epsilon_1$ gây ra:
+
+$$
+V_{M_1} = \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 | z - d|} + \frac{1}{4 \pi \epsilon_0} \frac{q'}{\epsilon_1 (d + z)}
+$$
 
 Chứng minh tương tự đối với một điểm $M_2(z, 0)$ $(z < 0)$ trong môi trường $\epsilon_2$:
 

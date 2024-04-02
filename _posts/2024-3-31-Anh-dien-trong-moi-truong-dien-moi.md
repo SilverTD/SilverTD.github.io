@@ -1,6 +1,8 @@
 ---
 
 title: Ảnh điện và sự phân cực trong môi trường điện môi (31/3/2024)
+thumbnail: https://silvertd.github.io/assets/img/method_of_image_1.png
+description: Một bài viết về phương pháp ảnh điện trong môi trường điện môi.
 ---
 
 # Điều kiện biên
@@ -21,7 +23,7 @@ E_{2t} - E_{1t} = 0
 \end{equation}
 $$
 
-Trong trường tĩnh điện, điện trường không đổi do đó $\nabla \times \mathbf{E} = 0$, ngược lại $\nabla \times \mathbf{D} = \nabla \times \mathbf{P} \not= 0$.
+Trong trường tĩnh điện, điện trường không đổi do đó $\nabla \times \mathbf{E} = 0$, ngược lại $\nabla \times \mathbf{D} = \nabla \times \mathbf{P}$ (có thể bằng $0$ hoặc khác $0$).
 
 Tuy nhiên nếu dùng định lý Gauss cho vector điện trường:
 
@@ -73,7 +75,7 @@ $$
  \end{equation}
 $$
 
-Trong đó $\delta^3(\mathbf{r})$ là hàm <i>Dirac Delta</i>. Mật độ điện tích khối $\rho_p$ chỉ có tại vị trí điện tích điểm $q$. Vậy điện môi bị phân cực tại bề mặt tiếp xúc với điện tích $q$ và trái dấu với điện tích.
+Trong đó $\delta^3(\mathbf{r})$ là hàm <i>Dirac Delta</i>. Điều này bảo rằng mật độ điện tích khối $\rho_p$ chỉ có một điện tích điểm duy nhất và nó nằm duy nhất tại vị trí điện tích điểm $q$. Vậy điện môi bị phân cực tại bề mặt tiếp xúc với điện tích $q$ và trái dấu với điện tích.
 
 Tổng điện tích lúc này bao gồm $Q = q + q_p = \frac{q}{\epsilon_r}$.
 
@@ -81,7 +83,7 @@ Tổng điện tích lúc này bao gồm $Q = q + q_p = \frac{q}{\epsilon_r}$.
 
 Ngược lại, nếu môi trường điện môi là hữu hạn thì ta không thể bỏ qua sự ảnh hưởng của các điện tích dương nằm ở rìa môi trường điện môi này. Nhìn vào chất điện môi của một tụ điện, ta thấy 2 rìa của chất điện môi bị phân cực với cùng điện tích và trái dấu nhau.
 
-> 2. Giả sử một quả cầu điện tích $Q > 0$ bán kính $a$, được bao quanh bởi một quả cầu điện môi đồng tâm bán kính $b$. Điện trường bên trong và bên ngoài quả cầu điện môi sẽ như nào ?
+> 2. Giả sử một quả cầu điện tích $Q > 0$ bán kính $a$, được bao quanh bởi một quả cầu điện môi đồng tâm bán kính $b > a$. Điện trường bên trong và bên ngoài quả cầu điện môi sẽ như nào ?
 
 Khi này điện tích $Q$ gây ra điện trường làm phân cực điện môi, tuy nhiên quả cầu điện môi sẽ bị phân cực thành phần âm và phần dương (vì chất điện môi lúc này là hữu hạn). Phần âm tại bề mặt tiếp xúc với $Q$ và phân dương cùng độ lớn tại bề mặt quả cầu điện môi.
 
@@ -115,37 +117,7 @@ Trong đó $Q_p$ là tổng các điện tích phân cực và nó bằng 0. V�
 
 Hãy nhớ về vật dẫn (giả sử thay điện môi thành vật dẫn), tại sao trong vật dẫn điện trường bằng 0 nhưng ra khỏi vật dẫn thì lại có điện trường do điện tích $Q$ gây ra ? Đấy là vì trên bề mặt vật dẫn lúc này có các điện tích mặt (và nó bằng với điện tích $Q$).
 
-Tương tự khi điện trường bị giảm trong điện môi, ngay khi chúng ra ngoài và được tăng thêm nhờ cương độ điện trường của các điện tích liên kết mặt bị phân cực tại bề mặt chất điện môi.
-
-> 4. Chia mặt phẳng thành 2 nửa vô hạn, một bên là môi trường $\epsilon_1$, một bên là $\epsilon_2$. Đặt điện tích $Q > 0$ bên trong môi trường $\epsilon_1$, chuyện gì sẽ xảy ra?
-
-Đầu tiên, điện tích $Q$ khiến môi trường $\epsilon_1$ phân cực, xuất hiện các điện tích mặt $Q_1'$ trái dấu tại bề mặt tiếp xúc với $Q$ khiến điện trường giảm đi $\epsilon_1$ lần. Tại bề mặt phân cách của môi trường $\epsilon_1$ sẽ xuất hiện các điện tích $Q_1'$ dương. Đồng thời khiến môi trường $\epsilon_2$ phân cực tại bề mặt phân cách, lúc này xuất hiện thêm các điện tích âm $Q_2'$ tại bề mặt phân cách của môi trường $\epsilon_2$.
-
-<b>Lưu ý:</b> $Q_1' \not= Q_2'$ vì $\epsilon_1 \not= \epsilon_2$.
-
-Ta có thể tìm được mật độ điện tích $\sigma_{p1}$ và $\sigma_{p2}$ tại bề mặt phân cách hai môi trường:
-
-$$
-\begin{equation*}
-\sigma_{p1} = \mathbf{P_1} \cdot \hat{n}
-\end{equation*}
-$$
-
-$$
-\begin{equation*}
-\sigma_{p2} = \mathbf{P_2} \cdot \hat{n}
-\end{equation*}
-$$
-
-Mật độ điện tích tại bề mặt phân cách lúc này:
-
-$$
-\begin{equation}
-\sigma_p = (\mathbf{P_1} - \mathbf{P_2}) \cdot \hat{n}
-\end{equation}
-$$
-
-<b>Lưu ý:</b> $\mathbf{P_1}$ sẽ cùng hướng với $\mathbf{P_2}$.
+Tương tự khi điện trường bị giảm trong điện môi, ngay khi chúng ra ngoài và được tăng thêm nhờ cường độ điện trường của các điện tích liên kết mặt bị phân cực tại bề mặt chất điện môi.
 
 # Chứng minh cấu hình ảnh điện trong điện môi
 
@@ -216,10 +188,15 @@ $$
 V_{M_1} = \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 | z - d|} + V_{\sigma}
 $$
 
-Trong đó:
+Trong đó $V_\sigma$ là điện thế do điện tích liên kết tại mặt phân cách $dq$ gây ra, ta có thể tính $dq = \sigma \cdot da$ trong đó để đơn giản ta dùng tọa độ cực $(\rho, \phi)$ nên $da = \rho d\rho \cdot d \phi$. Thế nên ta tính được $dq = \sigma \cdot \rho d\rho \cdot d\phi$:
 
 $$
-V_{\sigma} = \int dV = \int \frac{q_1}{4\pi \epsilon_0} \frac{\sigma 2\pi \rho \ d\rho}{2\sqrt{\rho^2 + z^2}}
+\begin{equation*}
+\begin{aligned}
+V_{\sigma} &= \int dV = \int^{2\pi}_0 \int^\infty_0 \frac{1}{4\pi \epsilon_0} \frac{\sigma \rho \ d\rho \cdot d\phi}{\sqrt{\rho^2 + z^2}} \\
+&= \int^\infty_0 \frac{1}{4\pi \epsilon_0} \frac{\sigma 2\pi \rho \ d\rho}{\sqrt{\rho^2 + z^2}}
+\end{aligned}
+\end{equation*}
 $$
 
 Ta có: $\rho/d = tan \ \theta \rightarrow \rho = d \cdot tan \ \theta$ và $d\rho = d \cdot d\theta / cos^2 \ \theta$.
@@ -255,11 +232,11 @@ $$
 
 Trong đó ta đặt $q' = \epsilon_1q_1 = (\dfrac{\epsilon_1 - \epsilon_2}{\epsilon_1 + \epsilon_2})q$. Vậy điện thế do các điện tích liên kết tại mặt phân cách gây ra tương đương như điện thế do điện tích $q'$ đặt tại $(-d, 0)$ trong môi trường $\epsilon_1$ gây ra.
 
-Chứng minh tương tự đối với một điểm $M_2(-z, 0)$ trong môi trường $\epsilon_2$:
+Chứng minh tương tự đối với một điểm $M_2(z, 0)$ $(z < 0)$ trong môi trường $\epsilon_2$:
 
 $$
 \begin{align*}
-V_{M_2} &= \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 (d-z)} + V_{\sigma} \\
+V_{M_2} &= \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 (d - z)} + V_{\sigma} \\
 &= \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 (d-z)} + \frac{q'}{4 \pi \epsilon_0 \epsilon_1 (d - z)} \\
 &= \frac{1}{4 \pi \epsilon_0} \frac{q''}{\epsilon_2 (d-z)}
 \end{align*}

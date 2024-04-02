@@ -188,7 +188,7 @@ $$
 V_{M_1} = \frac{1}{4 \pi \epsilon_0} \frac{q}{\epsilon_1 | z - d|} + V_{\sigma}
 $$
 
-Trong đó $V_\sigma$ là điện thế do điện tích liên kết tại mặt phân cách $dq$ gây ra, ta có thể tính $dq = \sigma \cdot da$ trong đó để đơn giản ta dùng tọa độ cực $(\rho, \phi)$ nên $da = \rho d\rho \cdot d \phi$. Thế nên ta tính được $dq = \sigma \cdot \rho d\rho \cdot d\phi$:
+Trong đó $V_\sigma$ là điện thế do điện tích liên kết tại mặt phân cách $dq$ gây ra, ta có thể tính $dq = \sigma \cdot da$ trong đó để đơn giản ta dùng hệ tọa độ cực $(\rho, \phi)$ nên $da = \rho d\rho \cdot d \phi$. Từ đó ta tính được $dq = \sigma \cdot \rho d\rho \cdot d\phi$:
 
 $$
 \begin{equation*}

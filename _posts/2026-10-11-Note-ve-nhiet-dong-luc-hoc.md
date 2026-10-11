@@ -12,7 +12,7 @@ $$
 trong đó $p_{ext}$ là áp suất mà môi trường tác dụng lên hệ, nếu quá trình là thuận nghịch thì ta có:
 
 $$
-\delta W = - \delta W_{ext} \implies p_{ext} = p
+\delta W = - \delta W_{ext} \Rightarrow p_{ext} = p
 $$
 
 Và ta có được:
@@ -25,7 +25,7 @@ trong đó $p$ là áp suất khí của hệ khí, tất nhiên đẳng thức 
 Theo nguyên lý 2 nhiệt động lực học, ta có:
 
 $$
-TdS \geq \delta Q = dU + p_{ext}dV \implies dU \leq TdS - p_{ext}dV
+TdS \geq \delta Q = dU + p_{ext}dV \Rightarrow dU \leq TdS - p_{ext}dV
 $$
 
 Còn đẳng thức mà ta hay thấy:

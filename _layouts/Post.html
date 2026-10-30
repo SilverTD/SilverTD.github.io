@@ -195,22 +195,55 @@
 </main>
 <script>
 MathJax = {
-  loader: {
-    '[tex]/braket': {
-      ready() {
-        const BraketMethods = MathJax._.input.tex.braket.BraketMethods.default;
-        const braket = function (parser, name, open, close, stretchy, barmax, space = false) {
-          const i = parser.i;
-          parser.GetArgument(name);
-          parser.i = i;
-          return BraketMethods.Braket(parser, name, open, close, stretchy, barmax, space);
-        };
-        const {MapHandler} = MathJax._.input.tex.MapHandler;
-        const map = MapHandler.getMap('Braket-macros');
-        ['set', 'braket', 'Set', 'Braket'].forEach((name) => map.lookup(name)._func = braket);
-      },
+    loader: {
+        load: ['[tex]/braket'],
+
+        '[tex]/braket': {
+            ready() {
+                const BraketMethods =
+                    MathJax._.input.tex.braket.BraketMethods.default;
+
+                const braket = function (
+                    parser, name, open, close, stretchy, barmax, space = false
+                ) {
+                    const i = parser.i;
+                    parser.GetArgument(name);
+                    parser.i = i;
+
+                    return BraketMethods.Braket(
+                        parser, name, open, close, stretchy, barmax, space
+                    );
+                };
+
+                const {MapHandler} = MathJax._.input.tex.MapHandler;
+                const map = MapHandler.getMap('Braket-macros');
+
+                ['set', 'braket', 'Set', 'Braket'].forEach((name) => {
+                    map.lookup(name)._func = braket;
+                });
+            }
+        }
     },
-  },
+
+    tex: {
+        packages: {'[+]': ['braket']},
+
+        inlineMath: [
+            ['$', '$'],
+            ['\\(', '\\)']
+        ],
+
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ],
+
+        processEscapes: true
+    },
+
+    chtml: {
+        font: 'mathjax'
+    }
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
